@@ -7,6 +7,7 @@ import TwoStars from "../images/reviews-2stars.png";
 import ThreeStars from "../images/reviews-3stars.png";
 import FourStars from "../images/reviews-4stars.png";
 import FiveStars from "../images/reviews-5stars.png";
+import WriteReviews from "./WriteReviews"
 
 function reviewStarts(rating) {
     if(rating ===1) {
@@ -40,6 +41,7 @@ export default class Reviews extends React.Component {
   render() {
     return (
       <div className="reviews-container">
+          <div className="get-reviews-container">
           <fieldset>
             <legend key={this.state.reviews._id}>Comments</legend>
                 {this.state.reviews.map(review => 
@@ -50,6 +52,8 @@ export default class Reviews extends React.Component {
                 </div>
                 )}
             </fieldset>
+            </div>
+            <WriteReviews />
       </div>
     )
   }
