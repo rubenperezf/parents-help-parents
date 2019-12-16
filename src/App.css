@@ -331,6 +331,7 @@
 .family-details-container .details-map {
   border: 5px solid #1F497D;
   border-radius: 50px;
+  margin: 0 auto;
 }
 /*details button*/
 .details-button {

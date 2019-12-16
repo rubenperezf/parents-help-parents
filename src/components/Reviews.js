@@ -41,9 +41,10 @@ export default class Reviews extends React.Component {
   render() {
     return (
       <div className="reviews-container">
+          <WriteReviews />
           <div className="get-reviews-container">
           <fieldset>
-            <legend key={this.state.reviews._id}>Comments</legend>
+            <legend key={this.state.reviews._id}>Reviews</legend>
                 {this.state.reviews.map(review => 
                 <div className="each-review-container">
                     <p>{reviewStarts(review.rating)}</p>
@@ -53,7 +54,7 @@ export default class Reviews extends React.Component {
                 )}
             </fieldset>
             </div>
-            <WriteReviews />
+            
       </div>
     )
   }
