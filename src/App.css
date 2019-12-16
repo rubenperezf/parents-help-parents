@@ -151,7 +151,6 @@
   margin-bottom: 300px;
   display: flex;
   flex-wrap: wrap;
-  z-index: -1;
 }
 .display-families-container .row {
   width: 450px;
