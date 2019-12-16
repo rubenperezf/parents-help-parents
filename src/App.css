@@ -253,7 +253,7 @@
 /*FAMILY REVIEWS&DETAILS*/
 .family-reviews-container {
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 /*FAMILY REVIEWS*/
@@ -263,6 +263,21 @@
   top: 150px;
   margin-bottom: 200px;
 
+}
+.each-review-container {
+  border-bottom: 2px solid  #1F497D;
+}
+.each-review-container p:last-child{
+  text-align: right;
+  margin-bottom: 5px;
+}
+.link-each-review-container {
+  text-decoration: none;
+  color:  #93291E;
+}
+.link-each-review-container:hover {
+  text-decoration: none;
+  color: #A9A9A9;
 }
 /*FAMILY DETAILS*/
 
