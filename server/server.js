@@ -1,11 +1,12 @@
 const express = require("express");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
-const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const credentials = require('./creds') 
-const familyRoutes = require('./routes/familiesRoutes')
+const mongoose = require("mongoose")
+const bodyParser = require("body-parser")
+const cors = require("cors")
+const credentials = require("./creds") 
+const familyRoutes = require("./routes/familiesRoutes")
+const familyReviewsRoutes = require("./routes/familyReviewsRoutes")
 
 
 
@@ -52,6 +53,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 familyRoutes.routes(app)
+familyReviewsRoutes.routes(app)
 
 
 
