@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect } from "react";
 import axios from "axios";
 import GoBack from "./GoBack";
+import Reviews from "./Reviews"
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -29,6 +30,7 @@ function FamilyDetails(props) {
       });
   }, []);
   return (
+    <div className="family-reviews-container">
     <div className="family-details-container">
       {data.list
         .filter(
@@ -93,8 +95,8 @@ function FamilyDetails(props) {
                   <iframe
                     className="details-map"
                     title="city-zone"
-                    width="600"
-                    height="500"
+                    width="400"
+                    height="300"
                     id="gmap_canvas"
                     src={`https://maps.google.com/maps?q=${family.location}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                     frameBorder="0"
@@ -105,11 +107,14 @@ function FamilyDetails(props) {
                 </div>
                 <div>
                   <GoBack />
+                  
                 </div>
               </fieldset>
             </div>
           );
         })}
+    </div>
+    <Reviews />
     </div>
   );
 }

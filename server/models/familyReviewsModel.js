@@ -12,6 +12,10 @@ const FamilyReviewsSchema = new mongoose.Schema({
     rating: {
         type: Number,
         required: true
+    },
+    familyName: {
+        type: String,
+        required: true,
     }
 })
 
