@@ -33,10 +33,10 @@ function Families() {
 <div className="display-families-container">
           {data.list.map(family => {
           return(
-            <div className="row">
+            <div className="row"  key={family._id}>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3">
               <div className="our-team">
-            <div key={family.key}>
+            <div>
           <div className="picture">
             <img className="img-fluid" src={family.images[0]} alt="family together"/>
           </div>
