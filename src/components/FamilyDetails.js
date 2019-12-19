@@ -117,7 +117,7 @@ function FamilyDetails(props) {
           );
         })}
     </div>
-    <Reviews />
+    <Reviews props={{id: props.location.pathname.split("/")[2]}}/>
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function SendEmail() {
   return (
     <form className="send-email-container" onSubmit={sendEmail}>
       <input type="email" name="user_email" placeholder="email"/>
-      <button class="button_cont" type="submit" align="center" class="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">Interested</button>
+      <button className="button_cont" type="submit" align="center" class="example_d" href="add-website-here" target="_blank" rel="nofollow noopener">Interested</button>
     </form>
   );
 }

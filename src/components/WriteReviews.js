@@ -1,19 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import { useState } from "react";
 import axios from "axios"
 import { startSession } from "mongoose";
 
-const MyFamily = () => {
+const MyFamily = ({props}) => {
+  console.log(props)
   const { loading, user } = useAuth0();
   const [familyName, setFamilyName]=useState("")
   const [familyId, setFamilyId]=useState("")
   const [rating, setRating]=useState("")
   const [review, setReview]=useState("")
 
-  if (loading || !user) {
-    return <div>Loading...</div>;
-  }
+
 
   const handlePost = (
     familyName, 
@@ -21,13 +20,19 @@ const MyFamily = () => {
     rating,
     review, 
 ) => {
-      axios.post("http://localhost:2500/familyReviews", {
+      axios.post(`http://localhost:2500/familyReviews`, {
         familyName: familyName,
         familyId: familyId,
         rating: rating,
         review: review
       })
     }
+    useEffect(() => {
+      setFamilyId(props.id)
+  },[])
+  if (loading || !user) {
+    return <div>Loading...</div>;
+  }
 
   return (
         <div className="write-reviews-container">
@@ -45,10 +50,6 @@ const MyFamily = () => {
 			<p>
 				<label>Family Name: </label>
 				<input type="text" onChange={e => setFamilyName(e.target.value)}/>
-			</p>
-			<p>
-				<label>FamilyId: </label>
-				<input type="text" onChange={e => setFamilyId(e.target.value)}/>
 			</p>
             <p>
 				<label>Rating: </label>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useReducer, useEffect} from 'react';
 import { Link } from "react-router-dom"
 import axios from 'axios';
 import { startSession } from 'mongoose';
@@ -8,6 +8,7 @@ import ThreeStars from "../images/reviews-3stars.png";
 import FourStars from "../images/reviews-4stars.png";
 import FiveStars from "../images/reviews-5stars.png";
 import WriteReviews from "./WriteReviews"
+import { getDefaultNormalizer } from '@testing-library/react';
 
 function reviewStarts(rating) {
     if(rating ===1) {
@@ -24,28 +25,41 @@ function reviewStarts(rating) {
   }
 }
 
-export default class Reviews extends React.Component {
-  state = {
-    reviews: []
+export const dataReducer = (state, action) => {
+  if (action.type === "SET_ERROR") {
+    return { ...state, list: [], error: true };
   }
-
-  componentDidMount() {
-    axios.get(`http://localhost:2500/familyReviews`)
-      .then(res => {
-        const reviews = res.data;
-        this.setState({ reviews });
-      })
+  if (action.type === "SET_LIST") {
+    return { ...state, list: action.list, error: null };
   }
+  throw new Error();
+};
+const initialData = {
+  list: [],
+  error: null
+};
 
-
-  render() {
+function Reviews({props}) {
+  console.log(props)
+  const [data, dispatch] = useReducer(dataReducer, initialData);
+    useEffect(() => {
+      axios
+        .get("http://localhost:2500/familyReviews")
+        .then(response => {
+          console.log(response);
+          dispatch({ type: "SET_LIST", list: response.data });
+        }).catch(() => {
+          dispatch({ type: "SET_ERROR" });
+        });
+    }, []);
     return (
       <div className="reviews-container">
-          <WriteReviews />
+          <WriteReviews props={{id: props.id}}/>
           <div className="get-reviews-container">
           <fieldset>
-            <legend key={this.state.reviews._id}>Reviews</legend>
-                {this.state.reviews.map(review => 
+            <legend key={data.list._id}>Reviews</legend>
+                {data.list.filter(review => review.familyId === props.id)
+                .map(review => 
                 <div className="each-review-container">
                     <p>{reviewStarts(review.rating)}</p>
                     <p>Review: {review.review}</p>
@@ -58,4 +72,5 @@ export default class Reviews extends React.Component {
       </div>
     )
   }
-}
+
+            export default Reviews
