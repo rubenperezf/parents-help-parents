@@ -9,8 +9,8 @@
 /*help & aboutUs*/
 
 .help-aboutUs-container{
-  /* position: relative;
-  top: 150px; */
+  position: relative;
+  top: 150px;
   height: 500px;
   width: 1000px;
   margin: 0 auto;
