@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   background-color: #FFFFFF;
   z-index: 1;
@@ -125,8 +125,8 @@
 /*MY PROFILE*/
 
 .profile {
-  /* position: relative;
-  top: 200px; */
+  position: relative;
+  top: 200px;
   width: 500px;
   margin: 0 auto;
   height: 500px;
@@ -139,8 +139,8 @@
 
 /*GET ALL FAMILIES*/
 .display-families-container {
-  /* position: relative;
-  top: 100px; */
+  position: relative;
+  top: 100px;
   padding: 50px;
   margin-bottom: 300px;
   display: flex;
@@ -253,8 +253,8 @@
 /*FAMILY REVIEWS*/
 .reviews-container {
   width: 40%;
-  /* position: relative;
-  top: 150px; */
+  position: relative;
+  top: 150px;
   margin-bottom: 200px;
 }
 .each-review-container {
@@ -277,8 +277,8 @@
 .family-details-container {
   margin-bottom: 200px;
   width: 55%;
-  /* position: relative;
-  top: 150px; */
+  position: relative;
+  top: 150px;
   margin-right: 50px;
 }
 .family-details-container fieldset,
@@ -476,9 +476,8 @@
   width: 1000px;
 }
 .carousel-container {
-  /* position: relative;
+  position: relative;
   top: 150px;
-  z-index: -1; */
   margin-bottom: 100px;
   z-index: -1;
   
