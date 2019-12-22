@@ -69,7 +69,9 @@ const MyFamily = ({ props }) => {
           </div>
           <div class='form-row'>
 				<label>Review: </label>
-				<input type="text" onChange={e => setReview(e.target.value)}/>
+        <br></br>
+        <br></br>
+				<textarea type="text" rows="10" cols="45" onChange={e => setReview(e.target.value)}></textarea>
 			</div>
           <div class="form-row">
             <button>Send</button>
