@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from "react";
 import axios from "axios";
 import GoBack from "./GoBack";
 import Reviews from "./Reviews"
-import SendEmail from "./SendEmail";
+
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -42,7 +42,6 @@ function FamilyDetails(props) {
             <div>
               <fieldset>
                 <legend key={family._id}>Family: {family.familyName}</legend>
-                <SendEmail/>
                 <div className="row-family-details">
                   <div className="text-family-details">
                     <p>About us:</p>

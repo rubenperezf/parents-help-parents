@@ -6,6 +6,8 @@ import CommentsVideoHome from "./CommentsVideoHome"
 import Slider from 'infinite-react-carousel';
 
 
+
+
 const ImagesCarousel = [header1,header2,header3]
 
 function Carousel() {
@@ -47,6 +49,7 @@ function Carousel() {
     <img src={header3} alt="home"/>
     </div>
   </Slider>
+
           
     </div>
     <CommentsVideoHome />
