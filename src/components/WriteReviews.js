@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const MyFamily = ({ props }) => {
   const { loading, user } = useAuth0();
@@ -24,7 +25,7 @@ const MyFamily = ({ props }) => {
   if (loading || !user) {
     return <div>Loading...</div>;
   }
-  console.log(rating)
+  console.log(rating);
 
   return (
     <div className="write-reviews-container">
@@ -46,35 +47,36 @@ const MyFamily = ({ props }) => {
           </div> */}
           <div class="form-row">
             <label for="rating">Rating</label>
-            <select id="rating" name="rating" onChange={e => setRating(e.target.value)}>
-              <option value="" >
-               
-              </option>
-              <option value="1" >
-                1 Star
-              </option>
-              <option value="2" >
-                2 Stars
-              </option>
-              <option value="3" >
-                3 Stars
-              </option>
-              <option value="4" >
-                4 Stars
-              </option>
-              <option value="5" >
-                5 Stars
-              </option>
+            <select
+              id="rating"
+              name="rating"
+              onChange={e => setRating(e.target.value)}
+            >
+              <option value=""></option>
+              <option value="1">1 Star</option>
+              <option value="2">2 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="5">5 Stars</option>
             </select>
           </div>
-          <div class='form-row'>
-				<label>Review: </label>
-        <br></br>
-        <br></br>
-				<textarea type="text" rows="10" cols="45" onChange={e => setReview(e.target.value)}></textarea>
-			</div>
           <div class="form-row">
-            <button>Send</button>
+            <label>Review: </label>
+            <br></br>
+            <br></br>
+            <textarea
+              type="text"
+              rows="10"
+              cols="45"
+              onChange={e => setReview(e.target.value)}
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <div class="container-2">
+              <div class="btn btn-two">
+                <span>Send</span>
+              </div>
+            </div>
           </div>
         </form>
       </fieldset>
