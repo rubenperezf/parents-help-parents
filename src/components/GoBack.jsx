@@ -4,13 +4,9 @@ class GoBack extends React.Component {
   render() {
     return (
     <div className="GoBack-container">
-                <div class="form-row">
-            <div class="container-2">
-              <div class="btn btn-two">
-                <span><Link className="details-button" to="/families/">Back</Link></span>
-              </div>
-            </div>
-          </div>
+<button class="button"><span><Link to="./families">Go back</Link></span></button>
+                
+
         
     </div>
     )

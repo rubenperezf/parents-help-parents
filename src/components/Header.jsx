@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
 function Header() {
+  
   return (
     <div className="header-container">
       <div className="header-links-container">

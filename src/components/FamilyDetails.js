@@ -60,13 +60,7 @@ function FamilyDetails(props) {
                     <p>Parents names:</p>
                   </div>
                   <p>
-                    {family.parentsName.map(function(element, i) {
-                      if (i === 0) {
-                        return element + " and ";
-                      } else {
-                        return element;
-                      }
-                    })}
+                    {family.parentsName.map((element=> element + " ") )}
                   </p>
                 </div>
                 <div className="row-family-details">
@@ -77,7 +71,7 @@ function FamilyDetails(props) {
                 </div>
                 <div className="row-family-details">
                   <div className="text-family-details">
-                    <p>Number of kids: </p>
+                    <p>Parents age: </p>
                   </div>
                   <p>{family.parentsAge.map(element => element + " ")}</p>
                 </div>

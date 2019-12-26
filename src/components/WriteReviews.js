@@ -67,17 +67,13 @@ const MyFamily = ({ props }) => {
             <textarea
               type="text"
               rows="10"
-              cols="45"
+              cols="47"
               onChange={e => setReview(e.target.value)}
             ></textarea>
           </div>
-          <div class="form-row">
-            <div class="container-2">
-              <div class="btn btn-two">
-                <span>Send</span>
-              </div>
-            </div>
-          </div>
+
+          <button class="button"><span>Send </span></button>
+  
         </form>
       </fieldset>
     </div>
