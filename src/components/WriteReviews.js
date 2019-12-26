@@ -3,6 +3,8 @@ import { useAuth0 } from "../react-auth0-spa";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Dialog from "./Dialog";
+
 
 const MyFamily = ({ props }) => {
   const { loading, user } = useAuth0();
@@ -27,16 +29,12 @@ const MyFamily = ({ props }) => {
   }
   console.log(rating);
 
+
   return (
     <div className="write-reviews-container">
       <fieldset>
         <legend>Write a review</legend>
-        <form
-          onSubmit={e => {
-            e.preventDefault();
-            handlePost(familyName, familyId, rating, review);
-          }}
-        >
+        <form>
           <div class="form-row">
             <label>Family Name: </label>
             <input type="text" onChange={e => setFamilyName(e.target.value)} />
@@ -72,7 +70,7 @@ const MyFamily = ({ props }) => {
             ></textarea>
           </div>
 
-          <button class="button"><span>Send </span></button>
+          <Dialog props={{handlePost, familyName, familyId, rating, review}} />
   
         </form>
       </fieldset>
