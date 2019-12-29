@@ -38,9 +38,7 @@ export default function Dialog({props}) {
 
   return (
     <div>
-      <button className="button" type="button" onClick={handleWriteReview}>
-        Send
-      </button>
+      <button className="button" type="button" onClick={handleWriteReview}><span>Send</span></button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

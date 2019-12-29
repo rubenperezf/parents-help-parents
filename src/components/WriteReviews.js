@@ -24,6 +24,9 @@ const MyFamily = ({ props }) => {
   useEffect(() => {
     setFamilyId(props.id);
   }, []);
+  useEffect(() => {
+    setFamilyName(user.name);
+  }, []);
   if (loading || !user) {
     return <div>Loading...</div>;
   }
@@ -35,10 +38,10 @@ const MyFamily = ({ props }) => {
       <fieldset>
         <legend>Write a review</legend>
         <form>
-          <div class="form-row">
+          {/* <div class="form-row">
             <label>Family Name: </label>
             <input type="text" onChange={e => setFamilyName(e.target.value)} />
-          </div>
+          </div> */}
           {/* <div class="form-row">
             <label>Rating: </label>
             <input type="text" onChange={e => setRating(e.target.value)} />

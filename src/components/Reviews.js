@@ -8,7 +8,7 @@ import ThreeStars from "../images/reviews-3stars.png";
 import FourStars from "../images/reviews-4stars.png";
 import FiveStars from "../images/reviews-5stars.png";
 import WriteReviews from "./WriteReviews"
-import { getDefaultNormalizer } from '@testing-library/react';
+
 
 function reviewStarts(rating) {
     if(rating ===1) {
