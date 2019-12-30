@@ -42,14 +42,7 @@ function Families() {
           </div>
           <div className="team-content">
             <h3 className="name">Family: {family.familyName}</h3>
-            <p className="title">Parents names:{" "}
-                  {family.parentsName.map(function(element, i) {
-                    if (i === 0) {
-                      return element + " and ";
-                    } else {
-                      return element;
-                    }
-                  })}</p>
+            <p className="title">Parents names: {family.parentsName}</p>
             <p className="title">Number of kids: {family.numberOfKids}</p>
             <p className="title">Kids Age: {family.kidsAge.map(element => element + " ")}</p>
             <div className="social">

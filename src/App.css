@@ -1,7 +1,8 @@
 * {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Oswald', sans-serif;
   margin: 0;
   padding: 0;
+
 }
 /*general button*/
 .button a {
@@ -79,6 +80,7 @@
   width: 100%;
   background-color: #FFFFFF;
   z-index: 1;
+  font-size: 28px;
 }
 /*header logo*/
 .header-container img {
@@ -115,21 +117,21 @@
   flex-direction: row;
 }
 .sign-up {
-  background-image: linear-gradient(to right, #ED213A, #93291E);
-  height: 50px;
-  width: 80px;  
-  color: white;
-  font-size: 12px;
+  background-color: #93291E;
+  height: 60px;
+  width: 90px;  
+  color: #FFFFFF;
+  font-size: 20px;
 }
 .sign-up:hover {
-  background-image: linear-gradient(to right, white, #93291E);
-  color: yellow;
+  background-color: #FFFFFF;
+  color: #93291E;
 }
 /*dropdown family*/
 .dropbtn {
   border: solid 1px black;
-  padding: 16px;
-  font-size: 16px;
+  padding: 15px;
+  font-size: 20px;
   cursor: pointer;
 }
 /* The container <div> - needed to position the dropdown content */
@@ -368,8 +370,6 @@
   border-radius: 50px;
   margin: 0 auto;
 }
-
-
 /*Write reviews*/
 .write-reviews-container .form-row{
   margin: 10px;
@@ -435,7 +435,6 @@
   padding-left: 10px;
   background: none;
   border: none;
-  font-family: 'Permanent Marker', cursive;
   font-size: 1.6em;
   color: rgba(238, 238, 238, 0.8);
   line-height: .6em;
@@ -553,8 +552,6 @@
   padding: 5px;
 
 }
-
-
 .text {
   color: white;
   font-size: 20px;
@@ -565,17 +562,12 @@
   -ms-transform: translate(-50%, -50%);
   white-space: nowrap;
 }
-
-@charset "UTF-8";
-
 .svg-inline--fa {
   vertical-align: -0.200em;
 }
-
 .rounded-social-buttons {
-  text-align: center;
+  margin: 20px;
 }
-
 .rounded-social-buttons .social-button {
   display: inline-block;
   position: relative;
@@ -595,65 +587,45 @@
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
 }
-
 .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
-
 .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
   font-size: 25px;
 }
-
 .rounded-social-buttons .social-button.facebook {
   background: #3b5998;
 }
-
 .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
   color: #3b5998;
   background: #fefefe;
   border-color: #3b5998;
 }
-
 .rounded-social-buttons .social-button.twitter {
   background: #55acee;
 }
-
 .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
   color: #55acee;
   background: #fefefe;
   border-color: #55acee;
 }
-
-.rounded-social-buttons .social-button.linkedin {
-  background: #007bb5;
-}
-
-.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
-  color: #007bb5;
-  background: #fefefe;
-  border-color: #007bb5;
-}
-
 .rounded-social-buttons .social-button.youtube {
   background: #bb0000;
 }
-
 .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
   color: #bb0000;
   background: #fefefe;
   border-color: #bb0000;
 }
-
 .rounded-social-buttons .social-button.instagram {
-  background: #125688;
+  background: #FF7F50;
 }
-
 .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
-  color: #125688;
+  color: #FF7F50;
   background: #fefefe;
-  border-color: #125688;
+  border-color: #FF7F50;
 }
 
 
