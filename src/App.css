@@ -417,7 +417,8 @@
 }
 .family-details-container fieldset,
 .family-reviews-container fieldset,
-.profile-container fieldset {
+.profile-container fieldset,
+.myfamily-container fieldset {
   border: 5px solid #1F497D;
   border-radius: 5px;
   font-size: 22px;
@@ -426,7 +427,8 @@
 }
 .family-details-container legend,
 .family-reviews-container legend,
-.profile-container legend {
+.profile-container legend,
+.myfamily-container legend{
   background: #1F497D;
   color: #fff;
   padding: 5px 10px ;
@@ -435,29 +437,35 @@
   box-shadow: 0 0 0 5px #ddd;
   margin-left: 20px;
 }
-.family-details-container img {
+.family-details-container img,
+.myfamily-container img  {
   border: 5px solid #1F497D;
   border-radius: 50px;
 }
-.family-details-container .row-family-details {
+.family-details-container .row-family-details,
+.myfamily-container .row-family-details {
   display: flex;
   margin-bottom: 10px;
   align-items: center;
 }
-.family-details-container .row-family-details img{
+.family-details-container .row-family-details img,
+.myfamily-container .row-family-details img{
   margin: 0 auto;
 }
-.family-details-container .text-family-details {
+.family-details-container .text-family-details,
+.myfamily-container .text-family-details{
   width: 20%;
   margin-right: 30px;
   border: 4px solid #1F497D;
   padding: 10px;
   border-radius: 10px;
 }
-.family-details-container .text-maped-details {
+.family-details-container .text-maped-details,
+.myfamily-container .text-maped-details {
   width: 60%;
 }
-.family-details-container .details-map {
+.family-details-container .details-map,
+.myfamily-container .details-map {
   border: 5px solid #1F497D;
   border-radius: 50px;
   margin: 0 auto;
@@ -472,7 +480,10 @@
 
 
 /* MY FAMILY*/
-
+.myfamily-container {
+  width: 40%;
+  margin: 0 auto;
+}
 
 /*CAROUSEL*/
 /* Slideshow container */

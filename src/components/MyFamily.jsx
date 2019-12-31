@@ -33,8 +33,7 @@ const MyFamily = () => {
   }, []);
 
   return (
-    <div className="family-reviews-container">
-    <div className="family-details-container">
+    <div className="myfamily-container">
       {data.list
         .filter(
           element => element.userName === user.name
@@ -107,7 +106,6 @@ const MyFamily = () => {
           );
                   })
                 }
-          </div>
           </div>
   );
 };
