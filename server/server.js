@@ -1,15 +1,12 @@
 const express = require("express");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
-const mongoose = require("mongoose")
-const bodyParser = require("body-parser")
-const cors = require("cors")
-const credentials = require("./creds") 
-const familyRoutes = require("./routes/familiesRoutes")
-const familyReviewsRoutes = require("./routes/familyReviewsRoutes")
-
-
-
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const credentials = require("./creds");
+const familyRoutes = require("./routes/familiesRoutes");
+const familyReviewsRoutes = require("./routes/familyReviewsRoutes");
 
 // Create a new Express app
 const app = express();
@@ -42,22 +39,18 @@ app.get("/api/external", checkJwt, (req, res) => {
   });
 });
 
+mongoose.Promise = global.Promise;
+mongoose.connect(
+  `mongodb+srv://${credentials.username}:${credentials.password}@cluster0-im5lw.mongodb.net/test?retryWrites=true&w=majority`,
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-
-mongoose.Promise = global.Promise
-mongoose.connect(`mongodb+srv://${credentials.username}:${credentials.password}@cluster0-im5lw.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
-
-app.use(cors())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
-
-familyRoutes.routes(app)
-familyReviewsRoutes.routes(app)
-
-
-
-
+familyRoutes.routes(app);
+familyReviewsRoutes.routes(app);
 
 // Start the app
-app.listen(2500, () => console.log('Server at 2500'));
+app.listen(2500, () => console.log("Server at 2500"));

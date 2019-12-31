@@ -1,15 +1,16 @@
-const familiesRouteFunctions = require('../controllers/familiesController')
+const familiesRouteFunctions = require("../controllers/familiesController");
 
-const routes = (app) =>{
-    app.route('/families')
+const routes = app => {
+  app
+    .route("/families")
     .get(familiesRouteFunctions.getFamilies)
-    .post(familiesRouteFunctions.postFamily)
+    .post(familiesRouteFunctions.postFamily);
 
-    app.route('/family/:id')
+  app
+    .route("/family/:id")
     .put(familiesRouteFunctions.putFamily)
     .get(familiesRouteFunctions.getFamily)
-    .delete(familiesRouteFunctions.deleteFamily)
-}
+    .delete(familiesRouteFunctions.deleteFamily);
+};
 
-
-module.exports = {routes}
+module.exports = { routes };

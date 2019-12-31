@@ -13,7 +13,7 @@ const NavBar = () => {
         </button>
       )}
       <div className="hola">
-      {isAuthenticated && (
+        {isAuthenticated && (
           <div className="dropdown">
             <button className="dropbtn">My Family</button>
             <div className="dropdown-content">
@@ -30,7 +30,6 @@ const NavBar = () => {
             Log out
           </button>
         )}
-
       </div>
     </div>
   );

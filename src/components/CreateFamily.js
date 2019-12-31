@@ -3,7 +3,6 @@ import { useAuth0 } from "../react-auth0-spa";
 import { useState } from "react";
 import axios from "axios";
 
-
 const CreateFamily = () => {
   const { loading, user } = useAuth0();
   const [familyName, setFamilyName] = useState("");
@@ -16,7 +15,6 @@ const CreateFamily = () => {
   const [images, setImages] = useState("");
   const [description, setDescription] = useState("");
   const [userName, setUserName] = useState("");
-
 
   const handleImage = e => {
     let input = e.target;
@@ -35,8 +33,7 @@ const CreateFamily = () => {
     kidsAge,
     location,
     images,
-    description,
-     
+    description
   ) => {
     axios.post("http://localhost:2500/families", {
       familyName: familyName,
@@ -52,8 +49,8 @@ const CreateFamily = () => {
     });
   };
   useEffect(() => {
-      setUserName(user.name);
-  },[]);
+    setUserName(user.name);
+  }, []);
   if (loading || !user) {
     return <div>Loading...</div>;
   }
@@ -120,23 +117,30 @@ const CreateFamily = () => {
               <p>
                 <label>Location: </label>
                 <select
-              id="rating"
-              name="rating"
-              onChange={e => setLocation(e.target.value)}
-            >
-              <option value=""></option>
-              <option value="Mt. Pleasant Charleston SC">Mt. Pleasant</option>
-              <option value="Downtown Charleston SC">Downtown</option>
-              <option value="James Island Charleston SC">James Island</option>
-              <option value="North Charleston Charleston SC">North Charleston</option>
-              <option value="Island of Palms Charleston SC">Island of Palms</option>
-              <option value="Folly Beach Charleston SC">Folly Beach</option>
-              <option value="Edisto Island SC">Edisto Island</option>
-              <option value="Goose Creek SC">Goose Creek</option>
-              <option value="Kiawah Island SC">Kiawah Island</option>
-              <option value="Sullivans Island SC">Sullivans Island</option>
-              
-            </select>
+                  id="rating"
+                  name="rating"
+                  onChange={e => setLocation(e.target.value)}
+                >
+                  <option value=""></option>
+                  <option value="Mt. Pleasant Charleston SC">
+                    Mt. Pleasant
+                  </option>
+                  <option value="Downtown Charleston SC">Downtown</option>
+                  <option value="James Island Charleston SC">
+                    James Island
+                  </option>
+                  <option value="North Charleston Charleston SC">
+                    North Charleston
+                  </option>
+                  <option value="Island of Palms Charleston SC">
+                    Island of Palms
+                  </option>
+                  <option value="Folly Beach Charleston SC">Folly Beach</option>
+                  <option value="Edisto Island SC">Edisto Island</option>
+                  <option value="Goose Creek SC">Goose Creek</option>
+                  <option value="Kiawah Island SC">Kiawah Island</option>
+                  <option value="Sullivans Island SC">Sullivans Island</option>
+                </select>
               </p>
               <p>
                 <label>Add images: </label>

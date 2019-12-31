@@ -4,7 +4,6 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
 function Header() {
-  
   return (
     <div className="header-container">
       <div className="header-links-container">
@@ -12,8 +11,12 @@ function Header() {
           <img src={logo} alt="Logo" />
         </Link>
         <ul>
-          <Link to="/help"><li>Help</li></Link>
-          <Link to="/aboutus"><li>About Us</li></Link>
+          <Link to="/help">
+            <li>Help</li>
+          </Link>
+          <Link to="/aboutus">
+            <li>About Us</li>
+          </Link>
         </ul>
       </div>
       <div className="header-login">

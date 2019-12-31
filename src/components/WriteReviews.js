@@ -73,8 +73,9 @@ const MyFamily = ({ props }) => {
             ></textarea>
           </div>
 
-          <Dialog props={{handlePost, familyName, familyId, rating, review}} />
-  
+          <Dialog
+            props={{ handlePost, familyName, familyId, rating, review }}
+          />
         </form>
       </fieldset>
     </div>

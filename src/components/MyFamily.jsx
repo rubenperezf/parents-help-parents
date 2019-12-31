@@ -17,7 +17,6 @@ const initialData = {
 };
 
 const MyFamily = () => {
-
   const [data, dispatch] = useReducer(dataReducer, initialData);
   const { loading, user } = useAuth0();
   useEffect(() => {
@@ -35,9 +34,7 @@ const MyFamily = () => {
   return (
     <div className="myfamily-container">
       {data.list
-        .filter(
-          element => element.userName === user.name
-        )
+        .filter(element => element.userName === user.name)
         .map(family => {
           return (
             <div>
@@ -60,9 +57,7 @@ const MyFamily = () => {
                   <div className="text-family-details">
                     <p>Parents names:</p>
                   </div>
-                  <p>
-                    {family.parentsName.map((element=> element + " ") )}
-                  </p>
+                  <p>{family.parentsName.map(element => element + " ")}</p>
                 </div>
                 <div className="row-family-details">
                   <div className="text-family-details">
@@ -104,12 +99,9 @@ const MyFamily = () => {
               </fieldset>
             </div>
           );
-                  })
-                }
-          </div>
+        })}
+    </div>
   );
 };
 
 export default MyFamily;
-
-
