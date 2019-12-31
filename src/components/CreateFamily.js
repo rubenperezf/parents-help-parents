@@ -118,11 +118,25 @@ const CreateFamily = () => {
                 />
               </p>
               <p>
-                <label>Location(Zip Code, City, State): </label>
-                <input
-                  type="text"
-                  onChange={e => setLocation(e.target.value)}
-                />
+                <label>Location: </label>
+                <select
+              id="rating"
+              name="rating"
+              onChange={e => setLocation(e.target.value)}
+            >
+              <option value=""></option>
+              <option value="Mt. Pleasant Charleston SC">Mt. Pleasant</option>
+              <option value="Downtown Charleston SC">Downtown</option>
+              <option value="James Island Charleston SC">James Island</option>
+              <option value="North Charleston Charleston SC">North Charleston</option>
+              <option value="Island of Palms Charleston SC">Island of Palms</option>
+              <option value="Folly Beach Charleston SC">Island of Palms</option>
+              <option value="Edisto Island SC">Island of Palms</option>
+              <option value="Goose Creek SC">Island of Palms</option>
+              <option value="Kiawah Island SC">Island of Palms</option>
+              <option value="Sullivans Island SC">Island of Palms</option>
+              
+            </select>
               </p>
               <p>
                 <label>Add images: </label>
