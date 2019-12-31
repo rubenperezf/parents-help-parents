@@ -37,6 +37,10 @@ const FamiliesSchema = new mongoose.Schema({
     images: {
         type: Array,
         required: true,
+    },
+    userName: {
+        type: String,
+        required: true,
     }
 })
 

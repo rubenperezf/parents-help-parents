@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import { useState } from "react";
 import axios from "axios";
+
 
 const CreateFamily = () => {
   const { loading, user } = useAuth0();
@@ -14,10 +15,9 @@ const CreateFamily = () => {
   const [location, setLocation] = useState("");
   const [images, setImages] = useState("");
   const [description, setDescription] = useState("");
+  const [userName, setUserName] = useState("");
 
-  if (loading || !user) {
-    return <div>Loading...</div>;
-  }
+
   const handleImage = e => {
     let input = e.target;
     for (let i = 0; i < input.files.length; i++) {
@@ -35,7 +35,8 @@ const CreateFamily = () => {
     kidsAge,
     location,
     images,
-    description
+    description,
+     
   ) => {
     axios.post("http://localhost:2500/families", {
       familyName: familyName,
@@ -46,10 +47,16 @@ const CreateFamily = () => {
       kidsAge: kidsAge,
       location: location,
       images: images,
-      description: description
+      description: description,
+      userName: userName
     });
   };
-
+  useEffect(() => {
+      setUserName(user.name);
+  },[]);
+  if (loading || !user) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="my-family-container">
       <div className="shade">
