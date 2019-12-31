@@ -130,11 +130,11 @@ const CreateFamily = () => {
               <option value="James Island Charleston SC">James Island</option>
               <option value="North Charleston Charleston SC">North Charleston</option>
               <option value="Island of Palms Charleston SC">Island of Palms</option>
-              <option value="Folly Beach Charleston SC">Island of Palms</option>
-              <option value="Edisto Island SC">Island of Palms</option>
-              <option value="Goose Creek SC">Island of Palms</option>
-              <option value="Kiawah Island SC">Island of Palms</option>
-              <option value="Sullivans Island SC">Island of Palms</option>
+              <option value="Folly Beach Charleston SC">Folly Beach</option>
+              <option value="Edisto Island SC">Edisto Island</option>
+              <option value="Goose Creek SC">Goose Creek</option>
+              <option value="Kiawah Island SC">Kiawah Island</option>
+              <option value="Sullivans Island SC">Sullivans Island</option>
               
             </select>
               </p>
