@@ -20,6 +20,14 @@ const Profile = () => {
             <p>Username: {user.name}</p>
             <p>Email: {user.email}</p>
           </fieldset>
+          <fieldset>
+            <legend>Evaluation</legend>
+            <h1>Value our service</h1>
+      <form>
+        <textarea placeholder="Type your Opinion" rows="20" cols="100" ></textarea>
+        <button className="button"><span>Send</span></button>
+      </form>
+          </fieldset>
         </div>
 
         <CreateFamily />
