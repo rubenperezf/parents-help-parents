@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const OpinionSchema = new mongoose.Schema({
-  user: {
+  userName: {
     type: String,
     required: true
   },
@@ -10,7 +10,7 @@ const OpinionSchema = new mongoose.Schema({
     required: true
   },
   rating: {
-    type: Number,
+    type: String,
     required: true
   }
 });
