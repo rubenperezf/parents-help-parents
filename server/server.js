@@ -8,6 +8,8 @@ const credentials = require("./creds");
 const familyRoutes = require("./routes/familiesRoutes");
 const familyReviewsRoutes = require("./routes/familyReviewsRoutes");
 const contactUsRoutes = require("./routes/contactUsRoutes")
+const opinionRoutes = require("./routes/opinionRoutes")
+
 
 // Create a new Express app
 const app = express();
@@ -53,6 +55,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 familyRoutes.routes(app);
 familyReviewsRoutes.routes(app);
 contactUsRoutes.routes(app)
+opinionRoutes.routes(app)
 
 // Start the app
 app.listen(2500, () => console.log("Server at 2500"));

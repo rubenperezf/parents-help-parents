@@ -24,7 +24,7 @@ const Profile = () => {
             <legend>Evaluation</legend>
             <h1>Value our service</h1>
       <form>
-        <textarea placeholder="Type your Opinion" rows="20" cols="100" ></textarea>
+        <textarea placeholder="Type your Opinion" rows="20" cols="110" ></textarea>
         <button className="button"><span>Send</span></button>
       </form>
           </fieldset>
