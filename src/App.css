@@ -219,29 +219,34 @@
   border: solid 1px #000000;
 }
 /*FAQ*/
-.contactUs-aboutUs-container button {
+.contactUs-aboutUs-container button,
+.sitemap-privacy-container button {
   font-size: 20px;
   width: 100%;
   margin: 10px;
 }
-.contactUs-aboutUs-container .open-faq:hover {
+.contactUs-aboutUs-container .open-faq:hover,
+.sitemap-privacy-container .open-faq:hover {
   font-size: 20px;
   width: 100%;
   margin: 10px;
   background-color: #ccc;
 }
-.contactUs-aboutUs-container .close-faq {
+.contactUs-aboutUs-container .close-faq,
+.sitemap-privacy-container .close-faq {
   font-size: 20px;
   display: flex;
   justify-content: flex-end;
 }
-.contactUs-aboutUs-container  .close-faq-2 {
+.contactUs-aboutUs-container  .close-faq-2,
+.sitemap-privacy-container .close-faq-2 {
   width: 50px;
-  border: 2px solid #93291E;
+  border: 2px solid #1F497D;
 }
-.contactUs-aboutUs-container  .close-faq-2:hover {
+.contactUs-aboutUs-container  .close-faq-2:hover,
+.sitemap-privacy-container .close-faq-2:hover {
   width: 50px;
-  border: 2px solid #93291E;
+  border: 2px solid #1F497D;
   background-color: #ccc;
 }
 
@@ -755,18 +760,6 @@
 }
 .sitemap-privacy-container ul {
   padding: 20px;
-}
-.privacy-parts {
-  background-color: 	#F0F0F0;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-.privacy-parts h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.privacy-parts li {
-  margin-left: 20px;
 }
 
 
