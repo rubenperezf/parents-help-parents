@@ -54,6 +54,7 @@
   margin: 0 auto;
   border: 1px solid #000000;
   padding: 30px;
+  font-size: 20px;
 }
 .contactUs-aboutUs-container p {
   margin-bottom: 10px;
@@ -118,25 +119,6 @@
 	border: 1px solid #1F497D;
 }
 
-.form-contact-us input[type="submit"],
-.form-contact-us input[type="button"]{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	width: 100%;
-	padding: 3%;
-	background: #1F497D;
-	border-bottom: 2px solid #1F497D;
-	border-top-style: none;
-	border-right-style: none;
-	border-left-style: none;	
-  color: #fff;
-  font-size: 20px;
-}
-.form-contact-us input[type="submit"]:hover,
-.form-contact-us input[type="button"]:hover{
-	background: #93291E;
-}
 /*header container*/
 .header-container {
   height: 150px;
@@ -242,7 +224,7 @@
   width: 100%;
   margin: 10px;
 }
-.contactUs-aboutUs-container button:hover {
+.contactUs-aboutUs-container .open-faq:hover {
   font-size: 20px;
   width: 100%;
   margin: 10px;
@@ -773,6 +755,18 @@
 }
 .sitemap-privacy-container ul {
   padding: 20px;
+}
+.privacy-parts {
+  background-color: 	#F0F0F0;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.privacy-parts h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.privacy-parts li {
+  margin-left: 20px;
 }
 
 

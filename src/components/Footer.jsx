@@ -56,7 +56,7 @@ function Footer() {
       </p>
       </div>
       <div className="privacy-sitemap-container">
-        <Link to="/privacy-poliy"><p>Privacy Policy</p></Link>
+        <Link to="/privacy-policy"><p>Privacy Policy</p></Link>
         <Link to="/site-map"><p>Site Map</p></Link>
       </div>
     </div>
