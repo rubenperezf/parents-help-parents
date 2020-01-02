@@ -29,8 +29,8 @@ function App() {
           <Route path="/contactus"><ContactUs/></Route>
           <Route path="/aboutus"><AboutUs/></Route>
           <Route path="/faq"><FAQ/></Route>
-          <Route path="privacy-policy"><PrivacyPolicy/></Route>
-          <Route path="site-map"><SiteMap/></Route>
+          <Route path="/privacy-policy"><PrivacyPolicy /></Route>
+          <Route path="/site-map"><SiteMap /></Route>
         </Switch>
 
         <Switch>
@@ -39,13 +39,9 @@ function App() {
           <PrivateRoute exact path="/myfamily" component={MyFamily} />
           <PrivateRoute exact path="/families" component={Families} />
           <PrivateRoute exact path="/family/:id" component={FamilyDetails} />
-
-
         </Switch>
        
         <Footer />
-        
-        
         
       </Router>
 

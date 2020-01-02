@@ -55,10 +55,6 @@
   border: 1px solid #000000;
   padding: 30px;
 }
-.contactUs-aboutUs-container h1 {
-  text-align: center;
-  padding-bottom: 20px;
-}
 .contactUs-aboutUs-container p {
   margin-bottom: 10px;
 }
@@ -664,6 +660,7 @@
 /* FOOTER */
 
 .footer-container {
+  font-size: 18px;
   margin: 40px 20px;
   display: flex;
   justify-content: space-between;
@@ -672,6 +669,7 @@
 }
 .footer-container a {
   color: #1F497D;
+  text-decoration: none;
 }
 .footer-container a:hover {
   color: #93291E;
@@ -757,6 +755,26 @@
   border-color: #FF7F50;
 }
 /*Privacy Sitemap*/
+.sitemap-privacy-container {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  padding: 30px;
+  font-size:20px;
+}
+.sitemap-privacy-container h1{
+	background: #1F497D;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.sitemap-privacy-container ul {
+  padding: 20px;
+}
+
 
 
 

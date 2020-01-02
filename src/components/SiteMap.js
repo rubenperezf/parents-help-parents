@@ -2,7 +2,8 @@ import React from "react";
 
 function SiteMap() {
   return (
-    <div className="sitemap-container">
+    <div className="sitemap-privacy-container">
+      <h1>Site Map</h1>
       <ul>
         <li>Home</li>
         <li>About Us</li>
