@@ -664,12 +664,11 @@
 /* FOOTER */
 
 .footer-container {
-  margin: 20px 20px;
-}
-.footer-container img {
-  width: 40px;
-  padding: 5px;
-
+  margin: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  border-top: 1px solid  #1F497D;
 }
 .footer-container a {
   color: #1F497D;
@@ -677,7 +676,12 @@
 .footer-container a:hover {
   color: #93291E;
 }
-.text {
+/*Social media*/
+.rounded-social-buttons img {
+  width: 40px;
+  padding: 5px;
+}
+.rounded-social-buttons .text {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -752,6 +756,8 @@
   background: #fefefe;
   border-color: #FF7F50;
 }
+/*Privacy Sitemap*/
+
 
 
 

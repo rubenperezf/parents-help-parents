@@ -3,10 +3,12 @@ import logoFacebook from "../images/logoFacebook.png";
 import logoTwitter from "../images/logoTwitter.png";
 import logoYoutube from "../images/logoYoutube.png";
 import logoInstagram from "../images/logoInstagram.png";
+import {Link} from "react-router-dom"
 
 function Footer() {
   return (
     <div className="footer-container">
+      <div className="social-copyright-container">
       <p>Follow us:</p>
       <div class="rounded-social-buttons">
         <a
@@ -52,6 +54,11 @@ function Footer() {
           Ruben Perez
         </a>
       </p>
+      </div>
+      <div className="privacy-sitemap-container">
+        <Link to="/privacy-poliy"><p>Privacy Policy</p></Link>
+        <Link to="/site-map"><p>Site Map</p></Link>
+      </div>
     </div>
   );
 }
