@@ -11,11 +11,14 @@ function Header() {
           <img src={logo} alt="Logo" />
         </Link>
         <ul>
-          <Link to="/help">
-            <li>Help</li>
+          <Link to="/contactus">
+            <li>Contact Us</li>
           </Link>
           <Link to="/aboutus">
             <li>About Us</li>
+          </Link>
+          <Link to="/faq">
+            <li>FAQ</li>
           </Link>
         </ul>
       </div>

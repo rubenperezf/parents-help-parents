@@ -1,60 +1,54 @@
-import React, { useEffect } from "react";
-import { useAuth0 } from "../react-auth0-spa";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const CreateFamily = () => {
-  const { loading, user } = useAuth0();
+
+function UpdateEvent({ props }) {
+  console.log(props)
+  const [description, setDescription] = useState("");
   const [familyName, setFamilyName] = useState("");
   const [parentsName, setParentsName] = useState("");
   const [parentsAge, setParentsAge] = useState("");
-  const [numberOfKids, setNumberOfKids] = useState("");
+  const [numOfKids, setNumOfKids] = useState("");
   const [kidsName, setKidsName] = useState("");
   const [kidsAge, setKidsAge] = useState("");
   const [location, setLocation] = useState("");
-  const [images, setImages] = useState("");
-  const [description, setDescription] = useState("");
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("")
 
-  const handleImage = e => {
-    let input = e.target;
-    for (let i = 0; i < input.files.length; i++) {
-      let reader = new FileReader();
-      reader.onload = b => setImages(images.concat(b.target.result));
-      reader.readAsDataURL(input.files[i]);
-    }
-  };
-  const handlePost = (
-    familyName,
-    parentsName,
-    parentsAge,
-    numberOfKids,
-    kidsName,
-    kidsAge,
-    location,
-    images,
-    description
-  ) => {
-    axios.post("http://localhost:2500/families", {
-      familyName: familyName,
-      parentsName: parentsName,
-      parentsAge: parentsAge,
-      numberOfKids: numberOfKids,
-      kidsName: kidsName,
-      kidsAge: kidsAge,
-      location: location,
-      images: images,
-      description: description,
-      userName: userName
-    });
-  };
   useEffect(() => {
-    setUserName(user.name);
+
+    setDescription(props.description);
+    setFamilyName(props.familyName);
+    setParentsName(props.parentsName);
+    setParentsAge(props.parentsAge);
+    setNumOfKids(props.numOfKids);
+    setKidsName(props.kidsName);
+    setKidsAge(props.kidsAge);
+    setLocation(props.location);
+    setUserName(props.userName);
+
+
   }, []);
- 
-  if (loading || !user) {
-    return <div>Loading...</div>;
+  function handleUpdate(description, familyName, parentsName, parentsAge, numOfKids, kidsName, kidsAge, location, userName) {
+    axios
+      .put(`http://localhost:2500/family/${props._id}`, {
+        description: description,
+        familyName: familyName,
+        parentsName: parentsName,
+        parentsAge: parentsAge,
+        numOfKids: numOfKids,
+        kidsName: kidsName,
+        kidsAge: kidsAge,
+        location: location,
+        userName: userName
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
+
   return (
     <div className="my-family-container">
       <div className="shade">
@@ -63,24 +57,25 @@ const CreateFamily = () => {
             <form
               onSubmit={e => {
                 e.preventDefault();
-                handlePost(
-                  familyName,
-                  parentsName,
-                  parentsAge,
-                  numberOfKids,
-                  kidsName,
-                  kidsAge,
-                  location,
-                  images,
-                  description
+                handleUpdate(
+                    description,
+                    familyName,
+                    parentsName,
+                    parentsAge,
+                    numOfKids,
+                    kidsName,
+                    kidsAge,
+                    location,
                 );
               }}
             >
+           
               <p>
                 <label>Family Name: </label>
                 <input
                   type="text"
                   onChange={e => setFamilyName(e.target.value)}
+                  placeholder={familyName}
                 />
               </p>
               <p>
@@ -88,6 +83,7 @@ const CreateFamily = () => {
                 <input
                   type="text"
                   onChange={e => setParentsName(e.target.value)}
+                  value={parentsName}
                 />
               </p>
               <p>
@@ -95,32 +91,39 @@ const CreateFamily = () => {
                 <input
                   type="text"
                   onChange={e => setParentsAge(e.target.value)}
+                  value={parentsAge}
                 />
               </p>
               <p>
                 <label>Number of Kids: </label>
                 <input
                   type="text"
-                  onChange={e => setNumberOfKids(e.target.value)}
+                  onChange={e => setNumOfKids(e.target.value)}
+                  defaultValue={setNumOfKids}
                 />
               </p>
               <p>
                 <label>Kids age: </label>
-                <input type="text" onChange={e => setKidsAge(e.target.value)} />
+                <input type="text" onChange={e => setKidsAge(e.target.value)}
+                value={kidsAge}
+                />
+                
               </p>
               <p>
                 <label>Kids Name: </label>
                 <input
                   type="text"
                   onChange={e => setKidsName(e.target.value)}
+                  value={kidsName}
                 />
               </p>
               <p>
                 <label>Location: </label>
                 <select
-                  id="rating"
-                  name="rating"
+                  id="location"
+                  name="location"
                   onChange={e => setLocation(e.target.value)}
+                  value={location}
                 >
                   <option value=""></option>
                   <option value="Mt. Pleasant Charleston SC">
@@ -144,18 +147,10 @@ const CreateFamily = () => {
                 </select>
               </p>
               <p>
-                <label>Add images: </label>
-                <input
-                  id="file-input"
-                  type="file"
-                  onChange={e => handleImage(e)}
-                  multiple
-                ></input>
-              </p>
-              <p>
-                <label>Message: </label>
+                <label>Write a description: </label>
                 <textarea
                   onChange={e => setDescription(e.target.value)}
+                  value={description}
                 ></textarea>
               </p>
               <p className="wipeout">
@@ -167,6 +162,6 @@ const CreateFamily = () => {
       </div>
     </div>
   );
-};
+}
 
-export default CreateFamily;
+export default UpdateEvent;

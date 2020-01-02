@@ -9,6 +9,7 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
+
   return (
     <Fragment>
       <div className="profile-container">

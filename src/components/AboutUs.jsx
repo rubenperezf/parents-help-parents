@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutUs() {
   return (
-    <div className="help-aboutUs-container">
+    <div className="contactUs-aboutUs-container form-style-6">
       <h1>About Us</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis eu

@@ -45,9 +45,9 @@
 /*HEADER*/
 
 /*links header*/
-/*help & aboutUs*/
+/*ContactUs & aboutUs*/
 
-.help-aboutUs-container{
+.contactUs-aboutUs-container{
   /* position: relative;
   top: 150px; */
   height: 500px;
@@ -57,14 +57,91 @@
   margin-bottom: 200px;
   padding: 30px;
 }
-.help-aboutUs-container h1 {
+.contactUs-aboutUs-container h1 {
   text-align: center;
   padding-bottom: 20px;
 }
-.help-aboutUs-container p {
+.contactUs-aboutUs-container p {
   margin-bottom: 10px;
 }
+/*form*/
+.form-contact-us{
+	font: 95%;
+	margin: 10px auto;
+	padding: 16px;
+  background: #F7F7F7;
+  height: 100%;
+}
+.contactUs-aboutUs-container h1{
+	background: #1F497D;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.form-contact-us input[type="text"],
+.form-contact-us input[type="date"],
+.form-contact-us input[type="datetime"],
+.form-contact-us input[type="email"],
+.form-contact-us input[type="number"],
+.form-contact-us input[type="search"],
+.form-contact-usinput[type="time"],
+.form-contact-us input[type="url"],
+.form-contact-us textarea,
+.form-contact-us select 
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-contact-us input[type="text"]:focus,
+.form-contact-us input[type="date"]:focus,
+.form-contact-us input[type="datetime"]:focus,
+.form-contact-us input[type="email"]:focus,
+.form-contact-us input[type="number"]:focus,
+.form-contact-us input[type="search"]:focus,
+.form-contact-us input[type="time"]:focus,
+.form-contact-usinput[type="url"]:focus,
+.form-contact-us textarea:focus,
+.form-contact-us select:focus
+{
+	box-shadow: 0 0 5px #1F497D;
+	padding: 3%;
+	border: 1px solid #1F497D;
+}
 
+.form-contact-us input[type="submit"],
+.form-contact-us input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #1F497D;
+	border-bottom: 2px solid #1F497D;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+.form-contact-us input[type="submit"]:hover,
+.form-contact-us input[type="button"]:hover{
+	background: #93291E;
+}
 /*header container*/
 .header-container {
   height: 150px;
@@ -76,6 +153,7 @@
   background-color: #FFFFFF;
   z-index: 1;
   font-size: 28px;
+  margin-bottom: 10px;
 }
 /*header logo*/
 .header-container img {
@@ -163,6 +241,8 @@
 .dropdown:hover .dropbtn {
   border: solid 1px #000000;
 }
+/*FAQ*/
+
 /*MY PROFILE*/
 .profile-container {
   display: flex;
@@ -558,12 +638,18 @@
 /* FOOTER */
 
 .footer-container {
-  margin: 20px 20px;
+  margin: 80px 20px;
 }
 .footer-container img {
   width: 40px;
   padding: 5px;
 
+}
+.footer-container a {
+  color: #1F497D;
+}
+.footer-container a:hover {
+  color: #93291E;
 }
 .text {
   color: white;

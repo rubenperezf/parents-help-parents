@@ -7,12 +7,13 @@ import Profile from "./components/Profile";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
 import MyFamily from "./components/MyFamily"
-import Help from "./components/Help"
+import ContactUs from "./components/ContactUs"
 // import ExternalApi from "./components/ExternalApi"
 import Footer from './components/Footer'
 import AboutUs from './components/AboutUs'
 import Families from './components/Families'
 import FamilyDetails from "./components/FamilyDetails"
+import FAQ from './components/FAQ'
 
 
 
@@ -24,8 +25,9 @@ function App() {
       <Header/>
         <Switch>
           <Route path="/" exact><Carousel /></Route>
-          <Route path="/help"><Help/></Route>
+          <Route path="/contactus"><ContactUs/></Route>
           <Route path="/aboutus"><AboutUs/></Route>
+          <Route path="/faq"><FAQ/></Route>
         </Switch>
 
         <Switch>
