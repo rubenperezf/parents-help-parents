@@ -40,7 +40,7 @@ const FamiliesComments = () => {
                 <div className="families-comments-container">
                   <blockquote key={item._id}>
                     <p className="quotation">{item.opinion}</p>
-                    <footer>{item.userName}</footer>
+                    <footer>{item.userName.split("@")[0]}</footer>
                   </blockquote>
                 </div>
               );
