@@ -473,10 +473,7 @@
   border-bottom: 1px solid #1F497D;
   margin: 0 30px;
 }
-.family-filter {
-  margin: 0 auto;
-  padding-bottom: 40px;
-}
+
 .filter-age,
 .filter-location {
   display: flex;
