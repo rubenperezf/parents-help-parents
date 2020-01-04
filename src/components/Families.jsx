@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import FamilyFilter from "./FamilyFilter"
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -29,6 +30,8 @@ function Families() {
       });
   }, []);
   return (
+    <div> 
+      <FamilyFilter />
     <div className="display-families-container">
       {data.list.map(family => {
         return (
@@ -60,8 +63,12 @@ function Families() {
               </div>
             </div>
           </div>
+          
         );
+        
       })}
+     
+    </div>
     </div>
   );
 }

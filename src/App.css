@@ -467,6 +467,82 @@
   color: #1F497D;
   background-color: #A9A9A9;
 }
+
+/*filter*/
+.family-filter-container {
+  border-bottom: 1px solid #1F497D;
+  margin: 0 30px;
+}
+.family-filter {
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.filter-age,
+.filter-location {
+  display: flex;
+  margin-bottom: 10px;
+}
+.filter-age .filter-text,
+.filter-location .filter-text {
+  width: 50%;
+  text-align: right;
+}
+.filter-age .filter-options,
+.filter-location .filter-text {
+  width: 50%;
+}
+
+
+.family-filter h1{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.family-filter label {
+  margin-right: 50px;
+  font-size: 20px;
+}
+.family-filter select {
+  width: 50%;
+  border: 1000px green solid;
+}
+
+.family-filter select {
+  background-color: #1F497D;
+  color: #fff;
+  padding: 12px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.family-filter::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.family-filter:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.family-filter select option {
+  padding: 30px;
+}
 /*FAMILY REVIEWS&DETAILS*/
 .family-reviews-container {
   display: flex;
@@ -765,8 +841,4 @@
 .sitemap-privacy-container ul {
   padding: 20px;
 }
-
-
-
-
 
