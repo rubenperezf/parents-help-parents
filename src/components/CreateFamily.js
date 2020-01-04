@@ -123,24 +123,24 @@ const CreateFamily = () => {
                   onChange={e => setLocation(e.target.value)}
                 >
                   <option value=""></option>
-                  <option value="Mt. Pleasant Charleston SC">
+                  <option value="Mt. Pleasant">
                     Mt. Pleasant
                   </option>
-                  <option value="Downtown Charleston SC">Downtown</option>
-                  <option value="James Island Charleston SC">
+                  <option value="Downtown">Downtown</option>
+                  <option value="James Island">
                     James Island
                   </option>
-                  <option value="North Charleston Charleston SC">
+                  <option value="North Charleston">
                     North Charleston
                   </option>
-                  <option value="Island of Palms Charleston SC">
+                  <option value="Island of Palms">
                     Island of Palms
                   </option>
-                  <option value="Folly Beach Charleston SC">Folly Beach</option>
-                  <option value="Edisto Island SC">Edisto Island</option>
-                  <option value="Goose Creek SC">Goose Creek</option>
-                  <option value="Kiawah Island SC">Kiawah Island</option>
-                  <option value="Sullivans Island SC">Sullivans Island</option>
+                  <option value="Folly Beach">Folly Beach</option>
+                  <option value="Edisto Island">Edisto Island</option>
+                  <option value="Goose Creek">Goose Creek</option>
+                  <option value="Kiawah Island">Kiawah Island</option>
+                  <option value="Sullivans Island">Sullivans Island</option>
                 </select>
               </p>
               <p>
