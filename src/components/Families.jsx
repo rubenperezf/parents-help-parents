@@ -82,7 +82,7 @@ function Families() {
       </div>
       </div>
     );
-  } else if(click ===true && filterValue === "All" ) {
+  } else if(click === false || filterValue === "All" ) {
     return (
       <div> 
         <FamilyFilter parentCallback={callbackFilterAge}/>
@@ -124,50 +124,8 @@ function Families() {
       </div>
       </div>
     );
-  } else {
-    return (
-      <div> 
-        <FamilyFilter parentCallback={callbackFilterAge}/>
-      <div className="display-families-container">
-      {data.list
-                .map(family => {
-                  return (
-                    <div className="row" key={family._id}>
-                      <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <div className="our-team">
-                          <div>
-                            <div className="picture">
-                              <img
-                                className="img-fluid"
-                                src={family.images[0]}
-                                alt="family together"
-                              />
-                            </div>
-                            <div className="team-content">
-                              <h3 className="name">Family: {family.familyName}</h3>
-                              <p className="title">Parents names: {family.parentsName}</p>
-                              <p className="title">
-                                Number of kids: {family.numberOfKids}
-                              </p>
-                              <p className="title">
-                                Kids Age: {family.kidsAge.map(element => element + " ")}
-                              </p>
-                              <div className="social">
-                                <Link to={`/family/${family._id}`}>See more</Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  );
-                })}
-        
-      </div>
-      </div>
-    );
-  }
+  } 
+
   
 }
 
