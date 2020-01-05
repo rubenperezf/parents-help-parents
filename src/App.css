@@ -488,8 +488,6 @@
 .filter-location .filter-text {
   width: 50%;
 }
-
-
 .family-filter h1{
   text-align: center;
   margin-bottom: 15px;
@@ -670,20 +668,29 @@
 }
 /* Background video and Comments*/
 .videoTag {
-  width: 700px;
+  width: 100%;
 }
 .commentsVideo-container {
   display: flex;
-  align-items: center;
-  margin: 40px;
+  justify-content: space-around;
+  padding: 0px 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  
 }
 .families-comments-container {
- padding: 50px;
- width: 50%;
+ width: 40%;
+
+
 }
+.commentsVideo-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+ }
 .background-video-container {
-  margin: 0 auto;
-  width: 50%;
+  width: 40%;
+  height: 500px;
+  
 }
 .families-comments-container blockquote{
   font-size: 30px;
@@ -694,7 +701,6 @@
   quotes: "\201C""\201D""\2018""\2019";
   padding: 10px 20px;
   line-height: 1.4;
-  height: 400px;
   padding: 50px;
   margin-top: 30px;
 }
@@ -702,7 +708,6 @@
 .families-comments-container blockquote:before {
   content: open-quote;
   display: inline;
-  height: 0px;
   line-height: 0;
   left: -10px;
   position: relative;
