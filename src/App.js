@@ -40,7 +40,7 @@ function App() {
           <PrivateRoute exact path="/families" component={Families} />
           <PrivateRoute exact path="/family/:id" component={FamilyDetails} />
         </Switch>
-       
+        
         <Footer />
         
       </Router>

@@ -4,6 +4,7 @@ import header2 from "../images/pictures-carousel-2.jpg";
 import header3 from "../images/pictures-carousel-3.jpg";
 import CommentsVideoHome from "./CommentsVideoHome";
 import Slider from "infinite-react-carousel";
+import Newsletter from "./Newsletter"
 
 const ImagesCarousel = [header1, header2, header3];
 
@@ -46,6 +47,7 @@ function Carousel() {
         </Slider>
       </div>
       <CommentsVideoHome />
+      <Newsletter />
     </div>
   );
 }
