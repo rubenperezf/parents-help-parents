@@ -652,8 +652,13 @@
   animation-duration: 10s;
   animation-fill-mode: forwards;
   color: #1F497D;
-  
-
+}
+.text-movement a {
+  text-decoration: none;
+  color: #93291E;
+}
+.text-movement a:hover {
+  color: #1F497D;
 }
 @keyframes text-movement {
 

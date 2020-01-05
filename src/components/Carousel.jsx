@@ -5,6 +5,7 @@ import header3 from "../images/pictures-carousel-3.jpg";
 import CommentsVideoHome from "./CommentsVideoHome";
 import Slider from "infinite-react-carousel";
 import Newsletter from "./Newsletter"
+import {Link} from "react-router-dom"
 
 const ImagesCarousel = [header1, header2, header3];
 
@@ -33,7 +34,7 @@ function Carousel() {
   return (
     <div>
       <div className="carousel-container">
-        <h1 className="text-movement">Families that take care of your family and vice versa.</h1>
+        <h1 className="text-movement">Families that take care of your family and vice versa.<Link to="/families"> Start Here!</Link></h1>
         <Slider dots className="slider">
           <div>
             <img src={header1} alt="home" />
