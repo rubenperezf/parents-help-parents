@@ -32,6 +32,7 @@ function Carousel() {
   return (
     <div>
       <div className="carousel-container">
+        <h1 className="text-movement">Families that take care of your family and vice versa.</h1>
         <Slider dots className="slider">
           <div>
             <img src={header1} alt="home" />
