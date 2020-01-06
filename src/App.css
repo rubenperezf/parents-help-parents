@@ -270,6 +270,13 @@
   border: 2px solid #1F497D;
   background-color: #ccc;
 }
+.sitemap-privacy-container a{
+  text-decoration: none;
+  color: #1F497D;
+}
+.sitemap-privacy-container a:hover {
+  color: #93291E;
+}
 
 
 
