@@ -599,7 +599,8 @@
 .family-details-container fieldset,
 .family-reviews-container fieldset,
 .profile-container fieldset,
-.myfamily-container fieldset {
+.myfamily-container fieldset,
+.notifications-container fieldset {
   border: 5px solid #1F497D;
   border-radius: 5px;
   font-size: 22px;
@@ -609,7 +610,8 @@
 .family-details-container legend,
 .family-reviews-container legend,
 .profile-container legend,
-.myfamily-container legend{
+.myfamily-container legend,
+.notifications-container legend{
   background: #1F497D;
   color: #fff;
   padding: 5px 10px ;
@@ -937,10 +939,10 @@
 .numberOfNotifications-container {
   float: right;
   margin-right: 2px;
-  color: red;
+  color: #93291E;
 }
 .numberOfNotifications-container .number{
-  border: 1px solid red;
+  border: 1px solid #93291E;
   border-radius: 100%;
   padding: 2px;
 
@@ -949,4 +951,15 @@
   width: 80%;
   margin: 0 auto;
 }
+.notifications-container ul {
+  padding: 20px;
+}
+.notifications-container li {
+  margin-bottom: 10px;
+}
+.notifications-container .email-notifications {
+  color: #93291E;
+  font-size: 30px;
+}
+
 

@@ -41,16 +41,12 @@ function Notifications() {
                   <div>
                     <fieldset>
                     
-                      <legend key={family._id}>Family: {family.familyName}</legend>
+                      <legend key={family._id}>Notifications</legend>
                       <div className="row-family-details">
-                        <div className="text-family-details">
-                          <p>Notifications:</p>
-                        </div>
-                    
-                      </div>
-                      <div className="row-family-details">
+                          <ul>
                         {family.interested.map(element =>(
-                           <p>There is a family interested in you, please contact them in the following email {element} </p>))}
+                           <li>There is a family interested in you, please contact them in the following email <span className="email-notifications">{element}</span> </li>))}
+                           </ul>
                       </div>
                       <br></br>
                     </fieldset>
