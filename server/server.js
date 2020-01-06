@@ -9,10 +9,37 @@ const familyRoutes = require("./routes/familiesRoutes");
 const familyReviewsRoutes = require("./routes/familyReviewsRoutes");
 const contactUsRoutes = require("./routes/contactUsRoutes")
 const opinionRoutes = require("./routes/opinionRoutes")
+const sgMail = require('@sendgrid/mail');
 
 
 // Create a new Express app
 const app = express();
+
+//sendgrid api key
+sgMail.setApiKey(credentials.SENDGRID_API_KEY);
+
+// Welcome page of the express server: 
+app.get('/', (req, res) => {
+  res.send("Welcome Parents help Parents server"); 
+});
+
+app.get('/send-email', (req,res) => {
+  
+  //Get Variables from query string in the search bar
+  const { recipient, sender, topic, text } = req.query; 
+
+  //Sendgrid Data Requirements
+  const msg = {
+      to: recipient, 
+      from: sender,
+      subject: topic,
+      text: text,
+  }
+
+  //Send Email
+  sgMail.send(msg)
+  .then((msg) => console.log(text));
+});
 
 // Set up Auth0 configuration
 const authConfig = {

@@ -49,6 +49,7 @@ const MyFamily = ({ props }) => {
           <div class="form-row">
             <label for="rating">Rating</label>
             <select
+              required="required"
               id="rating"
               name="rating"
               onChange={e => setRating(e.target.value)}
@@ -65,12 +66,7 @@ const MyFamily = ({ props }) => {
             <label>Review: </label>
             <br></br>
             <br></br>
-            <textarea
-              type="text"
-              rows="10"
-              cols="47"
-              onChange={e => setReview(e.target.value)}
-            ></textarea>
+            <textarea required type="text" rows="10" cols="47" onChange={e => setReview(e.target.value)}></textarea>
           </div>
 
           <Dialog
