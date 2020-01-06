@@ -1,6 +1,8 @@
 import React from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import { Link } from "react-router-dom";
+import FamilyDetails from "./FamilyDetails";
+import NumberofNotifications from "./NumberOfNotifications"
 
 const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -22,7 +24,7 @@ const NavBar = () => {
               <Link to="/myfamily">My Family </Link>
               {/* <Link to="/external-api">External API</Link> */}
               <Link to="/families">Families</Link>
-              <Link to="/notifications">Notifications</Link>
+              <Link to="/notifications">Notifications <NumberofNotifications /></Link>
             </div>
           </div>
         )}

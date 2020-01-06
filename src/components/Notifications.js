@@ -1,6 +1,7 @@
 import React, {useReducer, useEffect, useState} from "react"
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
+
 export const dataReducer = (state, action) => {
     if (action.type === "SET_ERROR") {
       return { ...state, list: [], error: true };
@@ -48,12 +49,10 @@ function Notifications() {
                     
                       </div>
                       <div className="row-family-details">
-                        <p>{family.interested.map(element => (
-                          "There is a family interested in you, please contact them in the following email " + element
-                        ))}</p>
-
-                      
+                        {family.interested.map(element =>(
+                           <p>There is a family interested in you, please contact them in the following email {element} </p>))}
                       </div>
+                      <br></br>
                     </fieldset>
                   </div>
                 );
