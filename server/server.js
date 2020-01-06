@@ -9,6 +9,7 @@ const familyRoutes = require("./routes/familiesRoutes");
 const familyReviewsRoutes = require("./routes/familyReviewsRoutes");
 const contactUsRoutes = require("./routes/contactUsRoutes")
 const opinionRoutes = require("./routes/opinionRoutes")
+const newsletterRoutes = require("./routes/newsletterRoutes")
 const sgMail = require('@sendgrid/mail');
 
 
@@ -83,6 +84,7 @@ familyRoutes.routes(app);
 familyReviewsRoutes.routes(app);
 contactUsRoutes.routes(app)
 opinionRoutes.routes(app)
+newsletterRoutes.routes(app)
 
 // Start the app
 app.listen(2500, () => console.log("Server at 2500"));

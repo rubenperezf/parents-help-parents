@@ -15,7 +15,7 @@ import FamilyDetails from "./components/FamilyDetails"
 import FAQ from "./components/FAQ"
 import SiteMap from "./components/SiteMap"
 import PrivacyPolicy from "./components/PrivacyPolicy"
-import SendEmailComponent from "./components/SendEmailComponent"
+
 
 
 
@@ -43,7 +43,6 @@ function App() {
         </Switch>
 
         <Footer />
-        <SendEmailComponent />
  
         
       </Router>
