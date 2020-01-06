@@ -49,6 +49,7 @@ const MyFamily = ({ props }) => {
           <div class="form-row">
             <label for="rating">Rating</label>
             <select
+              required
               required="required"
               id="rating"
               name="rating"
@@ -68,10 +69,10 @@ const MyFamily = ({ props }) => {
             <br></br>
             <textarea required type="text" rows="10" cols="47" onChange={e => setReview(e.target.value)}></textarea>
           </div>
-
-          <Dialog
+          <button className="button"><span>Submit</span></button>
+          {/* <Dialog
             props={{ handlePost, familyName, familyId, rating, review }}
-          />
+          /> */}
         </form>
       </fieldset>
     </div>

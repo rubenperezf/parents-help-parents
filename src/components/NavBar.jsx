@@ -22,6 +22,7 @@ const NavBar = () => {
               <Link to="/myfamily">My Family </Link>
               {/* <Link to="/external-api">External API</Link> */}
               <Link to="/families">Families</Link>
+              <Link to="/notifications">Notifications</Link>
             </div>
           </div>
         )}

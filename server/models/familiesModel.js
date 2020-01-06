@@ -40,6 +40,10 @@ const FamiliesSchema = new mongoose.Schema({
   userName: {
     type: String,
     required: true
+  },
+  interested: {
+    type: Array,
+    required: false
   }
 });
 

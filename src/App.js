@@ -15,6 +15,7 @@ import FamilyDetails from "./components/FamilyDetails"
 import FAQ from "./components/FAQ"
 import SiteMap from "./components/SiteMap"
 import PrivacyPolicy from "./components/PrivacyPolicy"
+import Notifications from "./components/Notifications"
 
 
 
@@ -40,6 +41,7 @@ function App() {
           <PrivateRoute exact path="/myfamily" component={MyFamily} />
           <PrivateRoute exact path="/families" component={Families} />
           <PrivateRoute exact path="/family/:id" component={FamilyDetails} />
+          <PrivateRoute exact path="/notifications" component={Notifications} />
         </Switch>
 
         <Footer />

@@ -1,7 +1,9 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useState } from "react";
 import axios from "axios";
 import GoBack from "./GoBack";
 import Reviews from "./Reviews";
+import Interested from "./Interested"
+
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -18,28 +20,33 @@ const initialData = {
 };
 function FamilyDetails(props) {
   const [data, dispatch] = useReducer(dataReducer, initialData);
+  const [interested, setInterested] = useState("")
   useEffect(() => {
     axios
-      .get("http://localhost:2500/families")
+      .get(`http://localhost:2500/family/${props.match.params.id}`)
       .then(response => {
         console.log(response);
+        setInterested(response.data[0].interested);
         dispatch({ type: "SET_LIST", list: response.data });
       })
       .catch(() => {
         dispatch({ type: "SET_ERROR" });
       });
   }, []);
+
   return (
     <div className="family-reviews-container">
       <div className="family-details-container">
+      
         {data.list
-          .filter(
-            element => element._id === props.location.pathname.split("/")[2]
-          )
+          // .filter(
+          //   element => element._id === props.location.pathname.split("/")[2]
+          // )
           .map(family => {
             return (
               <div>
                 <fieldset>
+                
                   <legend key={family._id}>Family: {family.familyName}</legend>
                   <div className="row-family-details">
                     <div className="text-family-details">
@@ -98,14 +105,18 @@ function FamilyDetails(props) {
                     ></iframe>
                   </div>
                   <div>
+                    <div className="interested-goBack-container">
                     <GoBack />
+                  <Interested props={{id: props.location.pathname.split("/")[2], familyName: family.familyName, numberOfKids: family.numberOfKids, parentsName: family.parentsName, parentsAge: family.parentsAge, kidsName: family.kidsName, kidsAge: family.kidsAge, location: family.location, description: family.description, images: family.images, interested: family.interested}}/>
+
+                    </div>
                   </div>
                 </fieldset>
               </div>
             );
           })}
       </div>
-      <Reviews props={{ id: props.location.pathname.split("/")[2] }} />
+      <Reviews props={{ id: props.location.pathname.split("/")[2]}} />
     </div>
   );
 }

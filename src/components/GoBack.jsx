@@ -4,7 +4,7 @@ class GoBack extends React.Component {
   render() {
     return (
       <div className="GoBack-container">
-        <button class="button">
+        <button class="button button-3">
           <span>
             <Link to="../families">Go back</Link>
           </span>

@@ -79,6 +79,7 @@ const CreateFamily = () => {
               <p>
                 <label>Family Name: </label>
                 <input
+                required
                   type="text"
                   onChange={e => setFamilyName(e.target.value)}
                 />
@@ -86,6 +87,7 @@ const CreateFamily = () => {
               <p>
                 <label>Parents Name: </label>
                 <input
+                  required
                   type="text"
                   onChange={e => setParentsName(e.target.value)}
                 />
@@ -93,6 +95,7 @@ const CreateFamily = () => {
               <p>
                 <label>Parents Age: </label>
                 <input
+                  required
                   type="text"
                   onChange={e => setParentsAge(e.target.value)}
                 />
@@ -100,17 +103,19 @@ const CreateFamily = () => {
               <p>
                 <label>Number of Kids: </label>
                 <input
+                  required
                   type="text"
                   onChange={e => setNumberOfKids(e.target.value)}
                 />
               </p>
               <p>
                 <label>Kids age: </label>
-                <input type="text" onChange={e => setKidsAge(e.target.value)} />
+                <input required type="text" onChange={e => setKidsAge(e.target.value)} />
               </p>
               <p>
                 <label>Kids Name: </label>
                 <input
+                required
                   type="text"
                   onChange={e => setKidsName(e.target.value)}
                 />
@@ -118,6 +123,7 @@ const CreateFamily = () => {
               <p>
                 <label>Location: </label>
                 <select
+                required
                   id="rating"
                   name="rating"
                   onChange={e => setLocation(e.target.value)}
@@ -146,6 +152,7 @@ const CreateFamily = () => {
               <p>
                 <label>Add images: </label>
                 <input
+                required
                   id="file-input"
                   type="file"
                   onChange={e => handleImage(e)}
@@ -155,6 +162,7 @@ const CreateFamily = () => {
               <p>
                 <label>Message: </label>
                 <textarea
+                required
                   onChange={e => setDescription(e.target.value)}
                 ></textarea>
               </p>
