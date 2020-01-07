@@ -39,7 +39,18 @@ function UpdateFamily() {
       .map(family => {
         return (
             <div key={family._id}>
-     <UpdateFamilyChild props= {{id: family._id}}/>
+     <UpdateFamilyChild props= {{
+         id: family._id,
+         familyName: family.familyName, 
+         description: family.description,
+         parentsName: family.parentsName,
+         parentsAge: family.parentsAge,
+         numberOfKids: family.numberOfKids,
+         kidsName: family.kidsName,
+         kidsAge: family.kidsAge,
+         images: family.Images,
+         location: family.location
+         }}/>
             </div>
      
   )

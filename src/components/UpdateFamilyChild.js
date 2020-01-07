@@ -23,6 +23,7 @@ function UpdateFamilyChild({props}) {
     const { loading, user } = useAuth0();
     const [data, dispatch] = useReducer(dataReducer, initialData);
     const [familyName, setFamilyName] = useState("");
+    const [description, setDescription] = useState("");
     const [parentsName, setParentsName] = useState("");
     const [parentsAge, setParentsAge] = useState("");
     const [numberOfKids, setNumberOfKids] = useState("");
@@ -30,18 +31,18 @@ function UpdateFamilyChild({props}) {
     const [kidsAge, setKidsAge] = useState("");
     const [location, setLocation] = useState("");
     const [images, setImages] = useState("");
-    const [description, setDescription] = useState("");
+    
 
     useEffect(() => {
-        axios
-          .get("http://localhost:2500/families")
-          .then(response => {
-            console.log(response);
-            dispatch({ type: "SET_LIST", list: response.data });
-          })
-          .catch(() => {
-            dispatch({ type: "SET_ERROR" });
-          });
+        setFamilyName(props.familyName);
+        setDescription(props.desription);
+        setParentsName(props.parentsName);
+        setParentsAge(props.parentsAge);
+        setNumberOfKids(props.numberOfKids);
+        setKidsName(props.kidsName);
+        setKidsAge(props.kidsAge);
+        setImages(props.Images);
+        setLocation(props.location);
       }, []);
 
     function handleUpdate(
@@ -95,17 +96,13 @@ return (
             );
         }}
       >   
-      {data.list.filter(element => element.userName === user.name)
-      .map(family => {
-        return (
-            <div>
         <div className="input-container">
           <br></br>
           <TextField
             required
             label="familyName"
             id="family-name"
-            defaultValue={family.familyName}
+            defaultValue={props.familyName}
             style={{ width: "500px" }}
            onChange={e => setFamilyName(e.target.value)}
           ></TextField>
@@ -117,7 +114,7 @@ return (
             required
             label="Description"
             id="family-description"
-            defaultValue={family.description}
+            defaultValue={props.description}
             style={{ width: "500px" }}
             onChange={e => setDescription(e.target.value)}
           ></TextField>
@@ -129,7 +126,7 @@ return (
             required
             label="parentsName"
             id="parents-name"
-            defaultValue={family.parentsName}
+            defaultValue={props.parentsName}
             rows="3"
             style={{ width: "500px" }}
             multiline
@@ -144,7 +141,7 @@ return (
             required
             label="parentsAge"
             id="parents-age"
-            defaultValue={family.parentsAge}
+            defaultValue={props.parentsAge}
             rows="15"
             style={{ width: "500px" }}
             multiline
@@ -158,7 +155,7 @@ return (
             required
             label="numberOfKids"
             id="number-of-kids"
-            defaultValue={family.numberOfKids}
+            defaultValue={props.numberOfKids}
             rows="1"
             style={{ width: "500px" }}
             multiline
@@ -172,7 +169,7 @@ return (
                 required
                 label="kidsName"
                 id="kids-name"
-                defaultValue={family.kidsName}
+                defaultValue={props.kidsName}
                 rows="1"
                 style={{ width: "500px" }}
                 multiline
@@ -186,7 +183,7 @@ return (
                 required
                 label="kidsAge"
                 id="kids-age"
-                defaultValue={family.kidsAge}
+                defaultValue={props.kidsAge}
                 rows="1"
                 style={{ width: "500px" }}
                 multiline
@@ -200,7 +197,7 @@ return (
                 required
                 label="images"
                 id="images"
-                defaultValue={family.images}
+                defaultValue={props.images}
                 rows="1"
                 style={{ width: "500px" }}
                 multiline
@@ -214,7 +211,7 @@ return (
                 required
                 label="location"
                 id="location"
-                defaultValue={family.location}
+                defaultValue={props.location}
                 rows="1"
                 style={{ width: "500px" }}
                 multiline
@@ -226,9 +223,6 @@ return (
           <br></br>
           <button className="button">Update Family</button>
         </div>
-        </div>
-        )
-      })}
       </form>
          </div>   
     )
