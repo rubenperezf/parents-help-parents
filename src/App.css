@@ -682,7 +682,7 @@
 .text-movement {
   position: relative;
   animation-name: text-movement;
-  animation-duration: 10s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   color: #1F497D;
 }
