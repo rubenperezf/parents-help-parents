@@ -6,7 +6,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
-import MyFamily from "./components/MyFamily"
+// import MyFamily from "./components/MyFamily"
 import ContactUs from "./components/ContactUs"
 import Footer from "./components/Footer"
 import AboutUs from "./components/AboutUs"
@@ -16,7 +16,7 @@ import FAQ from "./components/FAQ"
 import SiteMap from "./components/SiteMap"
 import PrivacyPolicy from "./components/PrivacyPolicy"
 import Notifications from "./components/Notifications"
-
+import CreateFamily from "./components/CreateFamily"
 
 
 
@@ -38,10 +38,11 @@ function App() {
         <Switch>
           <Route path="/" exact />
           <PrivateRoute exact path="/profile" component={Profile} />
-          <PrivateRoute exact path="/myfamily" component={MyFamily} />
+          {/* <PrivateRoute exact path="/myfamily" component={MyFamily} /> */}
           <PrivateRoute exact path="/families" component={Families} />
           <PrivateRoute exact path="/family/:id" component={FamilyDetails} />
           <PrivateRoute exact path="/notifications" component={Notifications} />
+          <PrivateRoute exact path="/create-family" component={CreateFamily} />
         </Switch>
 
         <Footer />

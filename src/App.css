@@ -290,6 +290,9 @@
   width: 30%;
   margin: 50px;
 }
+.profile p:last-of-type{
+  margin-bottom: 30px;
+}
 .profile img{
   border-radius: 100%;
   height: 100px;
@@ -671,8 +674,8 @@
 
 /* MY FAMILY*/
 .myfamily-container {
-  width: 40%;
-  margin: 0 auto;
+  width: 800px;
+  margin-left: 20px;
 }
 
 /*CAROUSEL*/

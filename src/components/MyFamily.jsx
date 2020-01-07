@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
-import EditFamily from "./EditFamily";
+
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -33,6 +33,7 @@ const MyFamily = () => {
       });
   }, []);
 
+
   return (
     <div className="myfamily-edit-container">
       <div className="myfamily-container">
@@ -42,7 +43,15 @@ const MyFamily = () => {
             return (
               <div>
                 <fieldset>
-                  <legend key={family._id}>Family: {family.familyName}</legend>
+                  <legend key={family._id}>My Family</legend>
+                  <div className="row-family-details">
+                    <div className="text-family-details">
+                      <p>Family Name:</p>
+                    </div>
+                    <div className="text-maped-details">
+                      <p>{family.familyName}</p>
+                    </div>
+                  </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
                       <p>About us:</p>

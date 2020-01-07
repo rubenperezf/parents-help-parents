@@ -1,7 +1,9 @@
 import React, { Fragment, useState, useEffect, useReducer } from "react";
 import { useAuth0 } from "../react-auth0-spa";
-import CreateFamily from "./CreateFamily";
+import {Link} from "react-router-dom"
 import axios from "axios";
+import MyFamily from "./MyFamily"
+import DeleteFamily from "./DeleteFamily"
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -58,7 +60,11 @@ const Profile = () => {
             <img className="profile-picture" src={user.picture} alt="Profile" />
             <p>Username: {user.name}</p>
             <p>Email: {user.email}</p>
+            <Link to="create-family"><button className="button"><span>Create Family</span></button></Link>
+            <button className="button"><span>Update Family</span></button>
+            <DeleteFamily />
           </fieldset>
+
           <fieldset>
             <legend>Evaluation</legend>
             <h1>Value our service</h1>
@@ -99,7 +105,7 @@ const Profile = () => {
             </form>
           </fieldset>
         </div>
-        <CreateFamily />
+        <MyFamily />
       </div>
     </Fragment>
   );
