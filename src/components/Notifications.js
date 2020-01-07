@@ -18,6 +18,7 @@ export const dataReducer = (state, action) => {
 function Notifications() {
     const { loading, user } = useAuth0();
     const [data, dispatch] = useReducer(dataReducer, initialData);
+    const [element, setElement] = useState("")
     useEffect(() => {
       axios
         .get("http://localhost:2500/families")

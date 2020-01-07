@@ -77,13 +77,13 @@ const MyFamily = () => {
                     <div className="text-family-details">
                       <p>Parents names:</p>
                     </div>
-                    <p>{family.parentsName.map(element => element + " ")}</p>
+                    <p>{family.parentsName}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
                       <p>Parents age: </p>
                     </div>
-                    <p>{family.parentsAge.map(element => element + " ")}</p>
+                    <p>{family.parentsAge}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
@@ -95,13 +95,13 @@ const MyFamily = () => {
                     <div className="text-family-details">
                       <p>Kids Name: </p>
                     </div>
-                    <p>{family.kidsName.map(element => element + " ")}</p>
+                    <p>{family.kidsName}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
                       <p>Kids Age: </p>
                     </div>
-                    <p>{family.kidsAge.map(element => element + " ")}</p>
+                    <p>{family.kidsAge}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">

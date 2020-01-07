@@ -25,7 +25,7 @@ const MyFamily = ({ props }) => {
     setFamilyId(props.id);
   }, []);
   useEffect(() => {
-    setFamilyName(user.name);
+    setFamilyName(user.name.split("@")[0]);
   }, []);
   if (loading || !user) {
     return <div>Loading...</div>;
@@ -69,10 +69,10 @@ const MyFamily = ({ props }) => {
             <br></br>
             <textarea required type="text" rows="10" cols="47" onChange={e => setReview(e.target.value)}></textarea>
           </div>
-          <button className="button"><span>Submit</span></button>
-          {/* <Dialog
+        
+          <Dialog
             props={{ handlePost, familyName, familyId, rating, review }}
-          /> */}
+          />
         </form>
       </fieldset>
     </div>

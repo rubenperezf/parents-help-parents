@@ -10,19 +10,19 @@ const FamiliesSchema = new mongoose.Schema({
     required: true
   },
   parentsName: {
-    type: Array,
+    type: String,
     required: true
   },
   parentsAge: {
-    type: Array,
+    type: String,
     required: true
   },
   kidsName: {
-    type: Array,
+    type: String,
     required: true
   },
   kidsAge: {
-    type: Array,
+    type: String,
     required: true
   },
   location: {

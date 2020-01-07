@@ -221,7 +221,7 @@ return (
             </div>
         <div className="input-container">
           <br></br>
-          <button className="button">Update Family</button>
+          <button className="button"><span>Update Family</span></button>
         </div>
       </form>
          </div>   

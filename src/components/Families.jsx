@@ -65,7 +65,7 @@ function Families() {
                                 Number of kids: {family.numberOfKids}
                               </p>
                               <p className="title">
-                                Kids Age: {family.kidsAge.map(element => element + " ")}
+                                Kids Age: {family.kidsAge}
                               </p>
                               <div className="social">
                                 <Link to={`/family/${family._id}`}>See more</Link>
@@ -107,7 +107,7 @@ function Families() {
                                 Number of kids: {family.numberOfKids}
                               </p>
                               <p className="title">
-                                Kids Age: {family.kidsAge.map(element => element + " ")}
+                                Kids Age: {family.kidsAge}
                               </p>
                               <div className="social">
                                 <Link to={`/family/${family._id}`}>See more</Link>
