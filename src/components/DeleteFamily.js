@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
+import { Link } from "react-router-dom"
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -46,7 +47,7 @@ function DeleteFamily() {
               className="button"
             >
               <span>Delete Family</span>
-            </button>
+              </button>
           );
         })}
     </div>

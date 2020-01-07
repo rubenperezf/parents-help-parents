@@ -1,7 +1,9 @@
 import React, { useReducer, useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
-
+import DeleteFamily from "./DeleteFamily";
+import { Link } from "react-router-dom";
+import UpdateFamily from "./UpdateFamily";
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -33,8 +35,8 @@ const MyFamily = () => {
       });
   }, []);
 
-
   return (
+    
     <div className="myfamily-edit-container">
       <div className="myfamily-container">
         {data.list
@@ -43,6 +45,12 @@ const MyFamily = () => {
             return (
               <div>
                 <fieldset>
+                  <Link to="update-family">
+                    <button className="button" props={family._id}>
+                      <span>UpdateFamily</span>
+                    </button>
+                  </Link>
+                  <DeleteFamily />
                   <legend key={family._id}>My Family</legend>
                   <div className="row-family-details">
                     <div className="text-family-details">

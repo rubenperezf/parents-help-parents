@@ -61,8 +61,6 @@ const Profile = () => {
             <p>Username: {user.name}</p>
             <p>Email: {user.email}</p>
             <Link to="create-family"><button className="button"><span>Create Family</span></button></Link>
-            <button className="button"><span>Update Family</span></button>
-            <DeleteFamily />
           </fieldset>
 
           <fieldset>

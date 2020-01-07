@@ -682,7 +682,7 @@
 .text-movement {
   position: relative;
   animation-name: text-movement;
-  animation-duration: 1s;
+  animation-duration: 2.5s;
   animation-fill-mode: forwards;
   color: #1F497D;
 }
@@ -970,6 +970,12 @@
 .notifications-container .email-notifications {
   color: #93291E;
   font-size: 30px;
+}
+
+/*UPdate*/
+.form-container-update {
+  width: 700px;
+  margin: 0 auto;
 }
 
 
