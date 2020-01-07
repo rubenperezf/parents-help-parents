@@ -42,12 +42,12 @@
   opacity: 1;
   right: 0;
 }
-.button-2 {
+.button-interested {
   background-color: #93291E;
   width: 200px;
 
 }
-.button-2:hover {
+.button-interested:hover {
   background-color: #93291E;
  
 
@@ -56,8 +56,9 @@
 .interested-goBack-container {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 30px;
 }
-.button-3 {
+.button-goBack {
   width: 200px;
 }
 

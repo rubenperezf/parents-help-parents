@@ -46,6 +46,12 @@ function FamilyDetails(props) {
             return (
               <div>
                 <fieldset>
+                <div className="interested-goBack-container">
+                    <GoBack />
+                    <Interested props={{id: props.location.pathname.split("/")[2], familyName: family.familyName, numberOfKids: family.numberOfKids, parentsName: family.parentsName, parentsAge: family.parentsAge, kidsName: family.kidsName, kidsAge: family.kidsAge, location: family.location, description: family.description, images: family.images, interested: family.interested}}/>
+
+                    </div>
+                
                 
                   <legend key={family._id}>Family: {family.familyName}</legend>
                   <div className="row-family-details">
@@ -106,11 +112,7 @@ function FamilyDetails(props) {
                     ></iframe>
                   </div>
                   <div>
-                    <div className="interested-goBack-container">
-                    <GoBack />
-                  <Interested props={{id: props.location.pathname.split("/")[2], familyName: family.familyName, numberOfKids: family.numberOfKids, parentsName: family.parentsName, parentsAge: family.parentsAge, kidsName: family.kidsName, kidsAge: family.kidsAge, location: family.location, description: family.description, images: family.images, interested: family.interested}}/>
 
-                    </div>
                   </div>
                 </fieldset>
               </div>

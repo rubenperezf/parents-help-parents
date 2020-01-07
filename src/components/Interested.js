@@ -24,7 +24,7 @@ function Interested({props}) {
       }
     return (
         <div className="interested-container">
-            <button className="button button-2" onClick={handlePutInterested}><span>Like it</span></button>
+            <button className="button button-interested" onClick={handlePutInterested}><span>Like it</span></button>
         </div>
     )
 }
