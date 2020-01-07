@@ -107,6 +107,7 @@ const MyFamily = () => {
                     <div className="text-family-details">
                       <p>City Zone: </p>
                     </div>
+                    <p>{family.location}</p>
                   </div>
                   <div className="row-family-details">
                     <iframe
