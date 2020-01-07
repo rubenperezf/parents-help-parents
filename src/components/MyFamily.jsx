@@ -45,12 +45,14 @@ const MyFamily = () => {
             return (
               <div>
                 <fieldset>
+                  <div className="update-delete-container">
                   <Link to="update-family">
-                    <button className="button" props={family._id}>
+                    <button className="button button-update" props={family._id}>
                       <span>UpdateFamily</span>
                     </button>
                   </Link>
                   <DeleteFamily />
+                  </div>
                   <legend key={family._id}>My Family</legend>
                   <div className="row-family-details">
                     <div className="text-family-details">

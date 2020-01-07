@@ -677,7 +677,15 @@
   width: 800px;
   margin-left: 20px;
 }
-
+.update-delete-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.button-update, 
+.button-delete {
+  width: 300px;
+}
 /*CAROUSEL*/
 .text-movement {
   position: relative;

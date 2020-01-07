@@ -44,7 +44,7 @@ function DeleteFamily() {
             <button
               key={family._id}
               onClick={()=> handleDelete(family._id)}
-              className="button"
+              className="button button-delete"
             >
               <span>Delete Family</span>
               </button>
