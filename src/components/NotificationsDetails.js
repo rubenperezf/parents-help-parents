@@ -36,7 +36,7 @@ function NotificationsDetails({props}) {
         <div>
         {data.list
                 .filter(
-            element => element.userName === props.family)
+            element => element.userEmail === props.family)
             .map(family => {
                 return (
         <ul>

@@ -41,6 +41,10 @@ const FamiliesSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  userEmail: {
+    type: String,
+    required: true
+  },
   interested: {
     type: Array,
     required: false

@@ -15,6 +15,7 @@ const CreateFamily = () => {
   const [images, setImages] = useState("");
   const [description, setDescription] = useState("");
   const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
   const handleImage = e => {
     let input = e.target;
@@ -45,11 +46,13 @@ const CreateFamily = () => {
       location: location,
       images: images,
       description: description,
-      userName: userName
+      userName: userName,
+      userEmail: userEmail
     });
   };
   useEffect(() => {
     setUserName(user.name);
+    setUserEmail(user.email)
   }, []);
  
   if (loading || !user) {
