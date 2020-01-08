@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import { useAuth0 } from "../react-auth0-spa";
+import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
   modal: {
@@ -21,7 +23,8 @@ const useStyles = makeStyles(theme => ({
 export default function Dialog({ props }) {
   console.log(props);
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
+  const { loading, user } = useAuth0();
 
   const handleWriteReview = () => {
     props.handlePost(
@@ -33,15 +36,32 @@ export default function Dialog({ props }) {
     setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+const handleInterested = () => {
+  props.handlePutInterested (
+    props.interested.concat(user.email),
+    );
+    setOpen(true)
   };
+
+const handleContactUs = () => {
+  props.handlePostContactUs(
+    props.name,
+    props.email,
+    props.message
+  )
+  setOpen(true)
+}
+const handleClose = () => {
+  setOpen(false);
+};
 
   return (
     <div>
-      <button className="button" type="button" onClick={handleWriteReview}>
+      {props.page==="writeReviews" &&<button className="button" type="button" onClick={handleWriteReview}>
         <span>Send</span>
-      </button>
+      </button>}
+      {props.page==="interested" &&  <button className="button button-interested" onClick={handleInterested}><span>Like it</span></button>}
+      {props.page==="contactUs" &&         <button className="button" onClick={e => { e.preventDefault(); handleContactUs(props.name, props.email, props.message)}}><span>Send</span></button>}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -56,8 +76,9 @@ export default function Dialog({ props }) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Review done!</h2>
-            <p id="transition-modal-description">Thanks.</p>
+            {props.page === "writeReviews" && `Review done thank you so much!`}
+            {props.page === "interested" && `We send a notification to this family with your email. They will conect with you in case they are interested`}
+            {props.page === "contactUs" && `Thanks for contact us. We will contact you as faster we can a chance!`}
           </div>
         </Fade>
       </Modal>

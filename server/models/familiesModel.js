@@ -44,6 +44,10 @@ const FamiliesSchema = new mongoose.Schema({
   interested: {
     type: Array,
     required: false
+  },
+  notificationsReaded: {
+    type: Array,
+    required: false
   }
 });
 

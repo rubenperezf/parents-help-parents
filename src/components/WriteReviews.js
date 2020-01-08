@@ -71,7 +71,7 @@ const MyFamily = ({ props }) => {
           </div>
         
           <Dialog
-            props={{ handlePost, familyName, familyId, rating, review }}
+            props={{ handlePost, familyName, familyId, rating, review, page: "writeReviews" }}
           />
         </form>
       </fieldset>
