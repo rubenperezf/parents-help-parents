@@ -957,6 +957,12 @@
   padding: 20px;
 }
 
+.sitemap-text {
+  margin: 0 auto;
+  width: 250px;
+}
+
+
 /*notifications*/
 .numberOfNotifications-container {
   float: right;

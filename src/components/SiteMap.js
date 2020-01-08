@@ -4,7 +4,9 @@ import {Link} from "react-router-dom"
 function SiteMap() {
   return (
     <div className="sitemap-privacy-container">
-      <h1>Site Map</h1>
+            <h1>Site Map</h1>
+      <div className="sitemap-text">
+
       <ul>
         <li>Home ->{" "}<Link to="/">Link</Link></li>
         <li>Contact Us ->{" "}<Link to="/contactus">Link</Link></li>
@@ -27,6 +29,7 @@ function SiteMap() {
         </ul>
         <li>Newsletter </li>
       </ul>
+      </div>
     </div>
   );
 }
