@@ -1,7 +1,7 @@
 import React, {useReducer, useEffect, useState} from "react"
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
-import {Link } from "react-router-dom"
+import NotificationDitails from "./NotificationsDetails"
 
 export const dataReducer = (state, action) => {
     if (action.type === "SET_ERROR") {
@@ -19,7 +19,7 @@ export const dataReducer = (state, action) => {
 function Notifications() {
     const { loading, user } = useAuth0();
     const [data, dispatch] = useReducer(dataReducer, initialData);
-    const [element, setElement] = useState("")
+
     useEffect(() => {
       axios
         .get("http://localhost:2500/families")
@@ -45,18 +45,15 @@ function Notifications() {
                     
                       <legend key={family._id}>Notifications</legend>
                       <div className="row-family-details">
-                          <ul>
-                        {family.interested.map(element =>(
-                          <div>
+                          <ol>
+                        {family.interested.reverse().map(element =>(
+                          <div className="notification-family-container">
                            <li>There is a family interested in you, please contact them in the following email <span className="email-notifications">{element}</span> </li>
-                           <ul>
-                             <li>Family name: {family.familyName}</li>
-                             <li>Number of kids: {family.numberOfKids}</li>
-                             <li><Link to={`./family/${family._id}`}> Visit their family profile.</Link></li>
-                            </ul>
+                           <NotificationDitails props={{family: element}} />
+                           {console.log(element)}
                             </div>
                            ))}
-                           </ul>
+                           </ol>
                       </div>
                       <br></br>
                     </fieldset>

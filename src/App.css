@@ -983,6 +983,21 @@
   color: #93291E;
   font-size: 30px;
 }
+.notification-family-container {
+  border: 5px solid #93291E;
+  border-radius: 5px;
+  font-size: 22px;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+.notification-family-container a {
+  text-decoration: none;
+  color: #1F497D;
+}
+.notification-family-container a:hover {
+  text-decoration: none;
+  color: #93291E;
+}
 
 /*UPdate*/
 .form-container-update {
