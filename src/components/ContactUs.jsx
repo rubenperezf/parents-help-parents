@@ -21,7 +21,10 @@ function ContactUs() {
   return (
     <div className="contactUs-aboutUs-container form-contact-us">
       <h1>Contact Us</h1>
-      <form>
+      <form onSubmit= {e => {
+        e.preventDefault();
+        handlePostContactUs( name, email, message);
+      }}>
         <input type="text"  placeholder="Your Name" onChange={ e => setName(e.target.value)} />
         <input type="email"  placeholder="Email Address" onChange={ e => setEmail(e.target.value)}/>
         <textarea placeholder="Type your Message" rows="20" cols="1000" onChange={ e => setMessage(e.target.value)}></textarea>

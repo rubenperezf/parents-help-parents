@@ -64,6 +64,21 @@ const handleClose = () => {
   setOpen(false);
 };
 
+const handlePostCreateFamily = () => {
+  props.handlePostFamily(
+    props.familyName,
+    props.parentsName,
+    props.parentsAge,
+    props.numberOfKids,
+    props.kidsName,
+    props.kidsAge,
+    props.location,
+    props.images,
+    props.description
+  )
+  
+}
+
   return (
     <div>
       {props.page==="writeReviews" &&<button className="button" type="button" onClick={handleWriteReview}>
@@ -72,6 +87,7 @@ const handleClose = () => {
       {props.page==="interested" &&  <button className="button button-interested" onClick={handleInterested}><span>Like it</span></button>}
       {props.page==="contactUs" &&         <button className="button" onClick={e => { e.preventDefault(); handleContactUs(props.name, props.email, props.message)}}><span>Send</span></button>}
       {props.page==="opinion" &&  <button className="button" onClick={e => { e.preventDefault(); handleOpinion(props.name, props.email, props.message)}}><span>Send</span></button>}
+      
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
