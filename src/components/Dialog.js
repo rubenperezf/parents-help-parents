@@ -48,9 +48,18 @@ const handleContactUs = () => {
     props.name,
     props.email,
     props.message
-  )
+  );
   setOpen(true)
-}
+};
+
+const handleOpinion = () => {
+  props.handlePostOpinion (
+    props.userName,
+    props.opinino,
+    props.rating
+  );
+  setOpen(true)
+};
 const handleClose = () => {
   setOpen(false);
 };
@@ -62,6 +71,7 @@ const handleClose = () => {
       </button>}
       {props.page==="interested" &&  <button className="button button-interested" onClick={handleInterested}><span>Like it</span></button>}
       {props.page==="contactUs" &&         <button className="button" onClick={e => { e.preventDefault(); handleContactUs(props.name, props.email, props.message)}}><span>Send</span></button>}
+      {props.page==="opinion" &&  <button className="button" onClick={e => { e.preventDefault(); handleOpinion(props.name, props.email, props.message)}}><span>Send</span></button>}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -75,10 +85,13 @@ const handleClose = () => {
         }}
       >
         <Fade in={open}>
+          <div className="dialog">
           <div className={classes.paper}>
             {props.page === "writeReviews" && `Review done thank you so much!`}
             {props.page === "interested" && `We send a notification to this family with your email. They will conect with you in case they are interested`}
             {props.page === "contactUs" && `Thanks for contact us. We will contact you as faster we can a chance!`}
+            {props.page === "opinion" && `Thanks for evaluate or webpage. We appreciate your opinion!`}
+          </div>
           </div>
         </Fade>
       </Modal>

@@ -3,7 +3,7 @@ import { useAuth0 } from "../react-auth0-spa";
 import {Link} from "react-router-dom"
 import axios from "axios";
 import MyFamily from "./MyFamily"
-import DeleteFamily from "./DeleteFamily"
+import Dialog from "./Dialog"
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {
@@ -26,7 +26,7 @@ const Profile = () => {
   const [opinion, setOpinion] = useState("");
   const [rating, setRating] = useState("");
 
-  const handlePost = (opinion, rating) => {
+  const handlePostOpinion = (opinion, rating) => {
     axios.post("http://localhost:2500/opinion", {
       userName: userName,
       opinion: opinion,
@@ -69,7 +69,7 @@ const Profile = () => {
             <form
               onSubmit={e => {
                 e.preventDefault();
-                handlePost(opinion, rating);
+                handlePostOpinion(opinion, rating);
               }}
             >
               <textarea
@@ -96,10 +96,8 @@ const Profile = () => {
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
-
-              <button className="button">
-                <span>Send</span>
-              </button>
+              <Dialog props ={{page: 'opinion', handlePostOpinion, userName: userName, opinion: opinion, rating: rating}}/>
+             
             </form>
           </fieldset>
         </div>
