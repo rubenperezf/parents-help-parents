@@ -1,6 +1,7 @@
 import React, {useReducer, useEffect, useState} from "react"
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
+import {Link } from "react-router-dom"
 
 export const dataReducer = (state, action) => {
     if (action.type === "SET_ERROR") {
@@ -46,7 +47,15 @@ function Notifications() {
                       <div className="row-family-details">
                           <ul>
                         {family.interested.map(element =>(
-                           <li>There is a family interested in you, please contact them in the following email <span className="email-notifications">{element}</span> </li>))}
+                          <div>
+                           <li>There is a family interested in you, please contact them in the following email <span className="email-notifications">{element}</span> </li>
+                           <ul>
+                             <li>Family name: {family.familyName}</li>
+                             <li>Number of kids: {family.numberOfKids}</li>
+                             <li><Link to={`./family/${family._id}`}> Visit their family profile.</Link></li>
+                            </ul>
+                            </div>
+                           ))}
                            </ul>
                       </div>
                       <br></br>
