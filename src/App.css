@@ -693,6 +693,18 @@
 .reviews-privateMessages-container {
   width: 700px;
 
+
+}
+.send-message-container {
+  display: flex;
+  justify-content: center;
+}
+.send-message-container .text-message{
+  width: 400px;
+  height: 40px;
+  margin-right: 20px;
+  border: 1px solid #93291E;
+  font-size: 20px;
 }
 .private-messages-container {
   height: 300px;
@@ -704,7 +716,14 @@
 .private-messages-container .writter {
   color: #1F497D;
   margin-right: 20px;
+  
 }
+.button-send-message {
+
+  width: 100px;
+
+}
+
 
 
 /* MY FAMILY*/
@@ -755,13 +774,7 @@
   width: 1000px;
   height: 600px;
 }
-.carousel-container {
-  /* position: relative;
-  top: 150px; */
-  /* margin-bottom: 200px; */
-  /* z-index: -1; */
-  
-}
+
 /* Background video and Comments*/
 .videoTag {
   width: 100%;

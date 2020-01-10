@@ -53,7 +53,7 @@ function Reviews({ props }) {
   }, []);
   return (
     <div className="reviews-container">
-      <WriteReviews props={{ id: props.id }} />
+     
       <div className="get-reviews-container">
         <fieldset>
           <legend key={data.list._id}>Reviews</legend>
@@ -76,6 +76,7 @@ function Reviews({ props }) {
             ))}
         </fieldset>
       </div>
+      <WriteReviews props={{ id: props.id }} />
     </div>
   );
 }

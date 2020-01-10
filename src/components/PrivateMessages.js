@@ -54,6 +54,7 @@ function PrivateMessages({ props }) {
     <div className="private-messages-container">
       <fieldset>
         <legend>Private Messages</legend>
+        <h3>Write message:</h3>
         <div className="send-message-container">
           <form
             onSubmit={e => {
@@ -62,13 +63,16 @@ function PrivateMessages({ props }) {
             }}
           >
             <input
-              requiredtype="text"
+              className="text-message"
+              required
+              type="text"
               onChange={e => setMessages(e.target.value)}
             ></input>
-            <input type="submit" value="Send" />
+            <button className="button button-send-message"><span>Send</span></button>
           </form>
         </div>
         <div className="read-message-container">
+        <h3>Conversation:</h3>
           {data.list.length > 0 && (
             <div>
               {data.list
