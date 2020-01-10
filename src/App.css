@@ -288,6 +288,7 @@
 /*MY PROFILE*/
 .profile-container {
   display: flex;
+  justify-content: center;
 }
 .profile {
   /* position: relative;
@@ -619,7 +620,7 @@
 
 .family-details-container {
   margin-bottom: 200px;
-  width: 55%;
+  width: 58%;
   /* position: relative;
   top: 150px; */
   margin-right: 50px;
@@ -679,7 +680,7 @@
 .myfamily-container .details-map {
   border: 5px solid #1F497D;
   border-radius: 50px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 /*Write reviews*/
 
