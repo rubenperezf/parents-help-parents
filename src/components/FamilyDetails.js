@@ -137,7 +137,7 @@ function FamilyDetails(props) {
 
 .map(family => {
   return (
-<PrivateMessages props={{user1: user.email, user2: family.userEmail, writter: user.name.split("@")[0]}}/>
+<PrivateMessages props={{user1: user.email, user2: family.userEmail, writter: user.name.split("@")[0], familyName: family.familyName}}/>
   )
 })}
       <Reviews props={{ id: props.location.pathname.split("/")[2]}} />

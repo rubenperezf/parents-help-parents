@@ -63,6 +63,7 @@ function PrivateMessages({ props }) {
             }}
           >
             <input
+              placeholder={`Write a private message to ${props.familyName}'s family.`}
               className="text-message"
               required
               type="text"
