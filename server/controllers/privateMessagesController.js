@@ -2,7 +2,7 @@ const PrivateMessagesModel = require("../models/PrivateMessagesModel");
 
 const postPrivateMessages = async (req, res) => {
   try {
-    console.log("post PrivateMessages");
+    console.log("post Private Messages");
 
     var PrivateMessagesInstance = new PrivateMessagesModel(req.body);
     const created = await PrivateMessagesModel.create(PrivateMessagesInstance);

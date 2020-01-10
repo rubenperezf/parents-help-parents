@@ -2,12 +2,12 @@ const privateMessagesRouteFunctions = require("../controllers/privateMessagesCon
 
 const routes = app => {
   app
-    .route("/privateMessages")
+    .route("/private-messages")
     .get(privateMessagesRouteFunctions.getPrivateMessage)
     .post(privateMessagesRouteFunctions.postPrivateMessages);
 
   app
-    .route("/PrivateMessages/:id")
+    .route("/private-messages/:id")
     .put(privateMessagesRouteFunctions.putPrivateMessages)
     .get(privateMessagesRouteFunctions.getPrivateMessages)
     .delete(privateMessagesRouteFunctions.deletePrivateMessages);

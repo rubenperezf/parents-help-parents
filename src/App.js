@@ -18,6 +18,8 @@ import PrivacyPolicy from "./components/PrivacyPolicy"
 import Notifications from "./components/Notifications"
 import CreateFamily from "./components/CreateFamily"
 import UpdateFamily from "./components/UpdateFamily"
+import PrivateMessages from "./components/PrivateMessages"
+// import PrivateMessagesDetails from "./components/PrivateMessagesDetails"
 
 
 
@@ -45,6 +47,7 @@ function App() {
           <PrivateRoute exact path="/notifications" component={Notifications} />
           <PrivateRoute exact path="/create-family" component={CreateFamily} />
           <PrivateRoute exact path="/update-family" component={UpdateFamily} />
+          
         </Switch>
 
         <Footer />

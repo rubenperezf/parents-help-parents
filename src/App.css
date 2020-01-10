@@ -53,14 +53,18 @@
 
 }
 
-.interested-goBack-container {
+ .interested-goBack-container {
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
+ }
+.button-privateMessages {
+  width: 300px;
 }
-.button-goBack {
+
+/* .button-goBack {
   width: 200px;
-}
+}  */
 
 /*HEADER*/
 
@@ -581,7 +585,7 @@
 }
 /*FAMILY REVIEWS*/
 .reviews-container {
-  width: 40%;
+  width:  500px;
   /* position: relative;
   top: 150px; */
   margin-bottom: 200px;
@@ -673,6 +677,22 @@
 }
 .write-reviews-container .form-row label{
   padding: 10px;
+}
+/*Private Messages*/
+.reviews-privateMessages-container {
+  width: 700px;
+
+}
+.private-messages-container {
+  height: 300px;
+  overflow: scroll;
+}
+.private-messages-container .each-message {
+  display: flex;
+}
+.private-messages-container .writter {
+  color: #1F497D;
+  margin-right: 20px;
 }
 
 

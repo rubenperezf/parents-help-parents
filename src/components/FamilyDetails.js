@@ -3,6 +3,11 @@ import axios from "axios";
 import GoBack from "./GoBack";
 import Reviews from "./Reviews";
 import Interested from "./Interested"
+import ButtomPrivateMessages from "./ButtonPrivateMessages"
+import { useAuth0 } from "../react-auth0-spa";
+import ButtonPrivateMessages  from "./ButtonPrivateMessages"
+import PrivateMessages from "./PrivateMessages"
+
 
 
 export const dataReducer = (state, action) => {
@@ -21,11 +26,14 @@ const initialData = {
 function FamilyDetails(props) {
   const [data, dispatch] = useReducer(dataReducer, initialData);
   const [interested, setInterested] = useState("")
+  const { loading, user } = useAuth0();
+
+
   useEffect(() => {
     axios
       .get(`http://localhost:2500/family/${props.match.params.id}`)
       .then(response => {
-        console.log(response);
+        console.log("families "+response);
         setInterested(response.data[0].interested);
         dispatch({ type: "SET_LIST", list: response.data });
       })
@@ -33,6 +41,9 @@ function FamilyDetails(props) {
         dispatch({ type: "SET_ERROR" });
       });
   }, []);
+
+
+
 
   return (
     <div className="family-reviews-container">
@@ -47,7 +58,7 @@ function FamilyDetails(props) {
               <div>
                 <fieldset>
                 <div className="interested-goBack-container">
-                    <GoBack />
+                 
                   <Interested props={{id: props.location.pathname.split("/")[2], familyName: family.familyName, numberOfKids: family.numberOfKids, parentsName: family.parentsName, parentsAge: family.parentsAge, kidsName: family.kidsName, kidsAge: family.kidsAge, location: family.location, description: family.description, images: family.images, interested: family.interested}}/>
 
                     </div>
@@ -110,16 +121,28 @@ function FamilyDetails(props) {
                       marginHeight="0"
                       marginWidth="0"
                     ></iframe>
+        
                   </div>
                   <div>
 
                   </div>
+                  <GoBack />
                 </fieldset>
               </div>
             );
           })}
       </div>
+      <div className="reviews-privateMessages-container">
+      {data.list
+
+.map(family => {
+  return (
+<PrivateMessages props={{user1: user.email, user2: family.userEmail, writter: user.name.split("@")[0]}}/>
+  )
+})}
       <Reviews props={{ id: props.location.pathname.split("/")[2]}} />
+
+          </div>
     </div>
   );
 }
