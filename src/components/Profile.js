@@ -75,8 +75,8 @@ const Profile = () => {
               <textarea
                 onChange={e => setOpinion(e.target.value)}
                 placeholder="Type your Opinion"
-                rows="20"
-                cols="110"
+                rows="15"
+                cols="58"
               ></textarea>
               <label htmlFor="rating">Rating</label>
               <select
