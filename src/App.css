@@ -686,6 +686,10 @@
 .write-reviews-container textarea{
   font-size: 20px;
 }
+.write-reviews-container select {
+  font-size: 20px;
+  margin: 20px;
+}
 .write-reviews-container .form-row label{
   padding: 10px;
 }
