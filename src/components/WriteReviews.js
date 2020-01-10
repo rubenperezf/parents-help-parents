@@ -5,7 +5,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Dialog from "./Dialog";
 
-
 const MyFamily = ({ props }) => {
   const { loading, user } = useAuth0();
   const [familyName, setFamilyName] = useState("");
@@ -32,25 +31,25 @@ const MyFamily = ({ props }) => {
   }
   console.log(rating);
 
-
   return (
     <div className="write-reviews-container">
       <fieldset>
         <legend>Write a review</legend>
         <form>
-          {/* <div class="form-row">
-            <label>Family Name: </label>
-            <input type="text" onChange={e => setFamilyName(e.target.value)} />
-          </div> */}
-          {/* <div class="form-row">
-            <label>Rating: </label>
-            <input type="text" onChange={e => setRating(e.target.value)} />
-          </div> */}
+          <div class="form-row">
+            <textarea
+              required
+              placeholder="Write your review here."
+              type="text"
+              rows="10"
+              cols="80"
+              onChange={e => setReview(e.target.value)}
+            ></textarea>
+          </div>
           <div class="form-row">
             <label for="rating">Rating</label>
             <select
               required
-              required="required"
               id="rating"
               name="rating"
               onChange={e => setRating(e.target.value)}
@@ -63,15 +62,16 @@ const MyFamily = ({ props }) => {
               <option value="5">5 Stars</option>
             </select>
           </div>
-          <div class="form-row">
-            <label>Review: </label>
-            <br></br>
-            <br></br>
-            <textarea required type="text" rows="10" cols="47" onChange={e => setReview(e.target.value)}></textarea>
-          </div>
-        
+
           <Dialog
-            props={{ handlePost, familyName, familyId, rating, review, page: "writeReviews" }}
+            props={{
+              handlePost,
+              familyName,
+              familyId,
+              rating,
+              review,
+              page: "writeReviews"
+            }}
           />
         </form>
       </fieldset>

@@ -65,7 +65,7 @@ const Profile = () => {
 
           <fieldset>
             <legend>Evaluation</legend>
-            <h1>Value our service</h1>
+            <h3>Value our service</h3>
             <form
               onSubmit={e => {
                 e.preventDefault();

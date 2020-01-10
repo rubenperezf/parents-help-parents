@@ -682,8 +682,9 @@
   margin: 0 auto;
 }
 /*Write reviews*/
-.write-reviews-container .form-row{
-  margin: 10px;
+
+.write-reviews-container textarea{
+  font-size: 20px;
 }
 .write-reviews-container .form-row label{
   padding: 10px;
