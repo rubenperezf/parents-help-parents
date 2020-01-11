@@ -43,7 +43,7 @@ const MyFamily = () => {
           .filter(element => element.userName === user.name)
           .map(family => {
             return (
-              <div>
+              <div key={family._id}>
                 <fieldset>
                   <div className="update-delete-container">
                   <Link to="update-family">

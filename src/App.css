@@ -726,7 +726,8 @@
 .button-send-message {
 
   width: 100px;
-
+  height: 42px;
+  padding: 0px;
 }
 
 

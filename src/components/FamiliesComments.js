@@ -38,8 +38,8 @@ const FamiliesComments = () => {
             .filter(item => item.rating > 7)
             .map(item => {
               return (
-                <div className="families-comments-container">
-                  <blockquote key={item._id}>
+                <div key={item._id} className="families-comments-container">
+                  <blockquote >
                     <p className="quotation">{item.opinion}</p>
                     <footer>{item.userName.split("@")[0]}</footer>
                   </blockquote>

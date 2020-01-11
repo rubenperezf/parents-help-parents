@@ -23,13 +23,24 @@ function PrivateMessages({ props }) {
   const [user2, setUser2] = useState("");
   const [messages, setMessages] = useState("");
   const [writter, setWritter] = useState("");
+  const [shouldFetch, setShouldFetch] = useState(true)
 
   const handlePostPrivateMessages = users => {
-    axios.post(`http://localhost:2500/private-messages`, {
-      users: [user1, user2],
-      messages: messages,
-      writter: writter
-    });
+    axios
+      .post(`http://localhost:2500/private-messages`, {
+        users: [user1, user2],
+        messages: messages,
+        writter: writter
+      })
+      .then(()=> {
+        setShouldFetch(true)
+        console.log("successfull post")
+      })
+      .catch(error => {
+        console.error(error)
+      })
+    ;
+
   };
 
   useEffect(() => {
@@ -39,16 +50,20 @@ function PrivateMessages({ props }) {
   }, []);
   const [data, dispatch] = useReducer(dataReducer, initialData);
   useEffect(() => {
+    if(!shouldFetch) return 
+    console.log("fetching")
     axios
       .get(`http://localhost:2500/private-messages`)
       .then(response => {
-        console.log("private messages" + response.data);
+        console.log("private messages", response.data);
         dispatch({ type: "SET_LIST", list: response.data });
+        setShouldFetch(false)
       })
       .catch(() => {
         dispatch({ type: "SET_ERROR" });
+        setShouldFetch(false)
       });
-  }, []);
+  }, [shouldFetch]);
 
   return (
     <div className="private-messages-container">
@@ -82,10 +97,11 @@ function PrivateMessages({ props }) {
                     (item.users[0] === user1 && item.users[1] === user2) ||
                     (item.users[0] === user2 && item.users[1] === user1)
                 )
+                .slice()
                 .reverse()
                 .map(item => {
                   return (
-                    <div className="each-message">
+                    <div key={item._id} className="each-message">
                       <p className="writter">{item.writter}:</p>
                       <p>{item.messages}</p>
                     </div>
