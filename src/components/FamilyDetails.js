@@ -59,7 +59,7 @@ function FamilyDetails(props) {
                 <fieldset>
                 <div className="interested-goBack-container">
                  
-                  <Interested props={{id: props.location.pathname.split("/")[2], familyName: family.familyName, numberOfKids: family.numberOfKids, parentsName: family.parentsName, parentsAge: family.parentsAge, kidsName: family.kidsName, kidsAge: family.kidsAge, location: family.location, description: family.description, images: family.images, interested: family.interested}}/>
+                  <Interested props={{id: props.location.pathname.split("/")[2], familyName: family.familyName, numberOfKids: family.numberOfKids, parentsName: family.parentsName, parentsAge: family.parentsAge, kidsName: family.kidsName, kidsAge: family.kidsAge, location: family.location, description: family.description, images: family.images, interested: family.interested, notificationsReaded: family.notificationsReaded}}/>
 
                     </div>
                 

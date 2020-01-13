@@ -1054,6 +1054,19 @@
   text-decoration: none;
   color: #93291E;
 }
+.button-readIt-container {
+  display: flex;
+  justify-content: center;
+}
+.button-readIt {
+  width: 200px;
+  padding: 0;
+}
+.button-readIt:hover {
+  width: 200px;
+  padding: 0;
+}
+ 
 
 /*UPdate*/
 .form-container-update {

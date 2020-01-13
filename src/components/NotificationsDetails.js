@@ -17,21 +17,39 @@ export const dataReducer = (state, action) => {
     error: null
   };
 function NotificationsDetails({props}) {
-    console.log("props "+props)
+    console.log("props ",props)
         const { loading, user } = useAuth0();
         const [data, dispatch] = useReducer(dataReducer, initialData);
+        const [shouldFetch, setShouldFetch] = useState(true)
     
         useEffect(() => {
+          if(!shouldFetch) return 
           axios
             .get("http://localhost:2500/families")
             .then(response => {
               console.log(response);
               dispatch({ type: "SET_LIST", list: response.data });
+              setShouldFetch(false)
             })
             .catch(() => {
               dispatch({ type: "SET_ERROR" });
+              setShouldFetch(false)
             });
-        }, []);
+        }, [setShouldFetch]);
+        const handleDeleteNotification = () => {
+            axios.put(`http://localhost:2500/family/${props.id}`, {
+            notificationsReaded: props.notificationsReaded.slice(1)
+      
+          })
+          .then(function(response) {
+            setShouldFetch(true)
+            console.log(response);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+          }
+          
     return (
         <div>
         {data.list
@@ -43,6 +61,9 @@ function NotificationsDetails({props}) {
           <li kay={family._id}>Family name: {family.familyName}</li>
           <li>Number of kids: {family.numberOfKids}</li>
           <li><Link to={`./family/${family._id}`}> Visit their family profile.</Link></li>
+          <div className="button-readIt-container">
+          <button className="button button-readIt" onClick={handleDeleteNotification}><span>Read It</span></button>
+          </div>
          </ul>
                 )
                 })}

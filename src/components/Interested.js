@@ -11,6 +11,7 @@ function Interested({props}) {
       if(!props.interested.includes(user.email)) {
         axios.put(`http://localhost:2500/family/${props.id}`, {
         interested: props.interested.concat(user.email),
+        notificationsReaded: props.notificationsReaded.concat(user.email)
   
       })
       .then(function(response) {

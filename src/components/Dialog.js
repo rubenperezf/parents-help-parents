@@ -25,6 +25,7 @@ export default function Dialog({ props }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false)
   const { loading, user } = useAuth0();
+  const [shouldFetch, setShouldFetch] = React.useState(true)
 
   const handleWriteReview = () => {
     props.handlePost(
@@ -32,8 +33,10 @@ export default function Dialog({ props }) {
       props.familyId,
       props.rating,
       props.review
-    );
+    )
+    setShouldFetch(true)
     setOpen(true);
+    
   };
 
 const handleInterested = () => {

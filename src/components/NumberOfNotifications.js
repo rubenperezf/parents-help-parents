@@ -39,7 +39,7 @@ function NumberOfNotifications() {
             return (
                 
                   <div className="row-family-details">
-                    <p className='number'>{family.interested.length}</p>
+                    <p className='number'>{family.notificationsReaded.length}</p>
               </div>
             );
             })}
