@@ -1,12 +1,10 @@
 import React, { useReducer, useEffect, useState } from "react";
 import axios from "axios";
-import GoBack from "./GoBack";
+import GoBack from "../GoBack";
 import Reviews from "./Reviews";
 import Interested from "./Interested"
-import ButtomPrivateMessages from "./ButtonPrivateMessages"
-import { useAuth0 } from "../react-auth0-spa";
-import ButtonPrivateMessages  from "./ButtonPrivateMessages"
-import PrivateMessages from "./PrivateMessages"
+import { useAuth0 } from "../../react-auth0-spa";
+import PrivateMessages from "../Messages/PrivateMessages"
 
 
 

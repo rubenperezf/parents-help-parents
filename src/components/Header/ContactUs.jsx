@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import axios from "axios"
-import Dialog from "./Dialog"
+import Dialog from "../Dialog"
 
 function ContactUs() {
   const [name, setName] = useState("");

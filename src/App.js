@@ -1,25 +1,23 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header"
-import Carousel from "./components/Carousel"
+import Header from "./components/Header/Header"
+import Carousel from "./components/Home/Carousel"
 import { Router, Route, Switch } from "react-router-dom";
-import Profile from "./components/Profile";
+import Profile from "./components/Profile/Profile";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
-// import MyFamily from "./components/MyFamily"
-import ContactUs from "./components/ContactUs"
-import Footer from "./components/Footer"
-import AboutUs from "./components/AboutUs"
-import Families from "./components/Families"
-import FamilyDetails from "./components/FamilyDetails"
-import FAQ from "./components/FAQ"
-import SiteMap from "./components/SiteMap"
-import PrivacyPolicy from "./components/PrivacyPolicy"
-import Notifications from "./components/Notifications"
-import CreateFamily from "./components/CreateFamily"
-import UpdateFamily from "./components/UpdateFamily"
-import PrivateMessages from "./components/PrivateMessages"
-// import PrivateMessagesDetails from "./components/PrivateMessagesDetails"
+import ContactUs from "./components/Header/ContactUs"
+import Footer from "./components/Footer/Footer"
+import AboutUs from "./components/Header/AboutUs"
+import Families from "./components/Families/Families"
+import FamilyDetails from "./components/Families/FamilyDetails"
+import FAQ from "./components/Header/FAQ"
+import SiteMap from "./components/Footer/SiteMap"
+import PrivacyPolicy from "./components/Footer/PrivacyPolicy"
+import Notifications from "./components/Notifications/Notifications"
+import CreateFamily from "./components/Profile/CreateFamily"
+import UpdateFamily from "./components/Profile/UpdateFamily"
+
 
 
 

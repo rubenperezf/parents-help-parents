@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ToggleContent from "./ToggleContent";
+import ToggleContent from "../ToggleContent";
 
 function FAQ() {
   return (

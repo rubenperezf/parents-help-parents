@@ -1,9 +1,9 @@
 import React, { Fragment, useState, useEffect, useReducer } from "react";
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "../../react-auth0-spa";
 import {Link} from "react-router-dom"
 import axios from "axios";
 import MyFamily from "./MyFamily"
-import Dialog from "./Dialog"
+import Dialog from "../Dialog"
 
 export const dataReducer = (state, action) => {
   if (action.type === "SET_ERROR") {

@@ -1,7 +1,7 @@
 import React from "react"
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "../../react-auth0-spa";
 import axios from "axios";
-import Dialog from "./Dialog"
+import Dialog from "../Dialog"
 
 function Interested({props}) {
     console.log(props)

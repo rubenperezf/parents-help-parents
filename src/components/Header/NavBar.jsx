@@ -1,8 +1,8 @@
 import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
-import FamilyDetails from "./FamilyDetails";
-import NumberofNotifications from "./NumberOfNotifications"
+import FamilyDetails from "../Families/FamilyDetails";
+import NumberofNotifications from "../Notifications/NumberOfNotifications"
 
 const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();

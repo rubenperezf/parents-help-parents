@@ -1,5 +1,5 @@
 import React from "react";
-import ToggleContent from "./ToggleContent";
+import ToggleContent from "../ToggleContent";
 
 function PrivacyPolicy() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../video/php-video.mp4";
+import video from "../../video/php-video.mp4";
 
 const BackgroundVideo = () => {
   return (

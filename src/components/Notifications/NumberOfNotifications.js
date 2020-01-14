@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useReducer} from "react"
 import axios from "axios"
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "../../react-auth0-spa";
 
 export const dataReducer = (state, action) => {
     if (action.type === "SET_ERROR") {
