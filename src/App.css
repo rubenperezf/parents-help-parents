@@ -1066,6 +1066,14 @@
   width: 200px;
   padding: 0;
 }
+.button-deleteFamily-notification {
+  width: 200px;
+  padding: 0;
+}
+.button-deleteFamily-notification:hover {
+  width: 200px;
+  padding: 0;
+}
  
 
 /*UPdate*/

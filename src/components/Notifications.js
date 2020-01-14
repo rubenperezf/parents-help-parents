@@ -54,7 +54,7 @@ function Notifications() {
                               {element}
                             </span>{" "}
                           </li>
-                          <NotificationDitails props={{ family: element, notificationsReaded: family.notificationsReaded, id: family._id }} />
+                          <NotificationDitails props={{ family: element, notificationsReaded: family.notificationsReaded, id: family._id, interested: family.interested }} />
                           {console.log(element)}
                         </div>
                       ))}
