@@ -11,7 +11,7 @@ function Newsletter() {
   const sendEmail = _ => {
     fetch(
       `http://localhost:2500/send-email?recipient=${emailRecipient}&sender=${emailSender}&topic=${emailSubject}&text=${emailText}`
-    ) //query string url
+    ) 
       .catch(err => console.error(err));
     handlePost(emailRecipient);
   };

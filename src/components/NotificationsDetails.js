@@ -67,7 +67,7 @@ function NotificationsDetails({props}) {
           <li><Link to={`./family/${family._id}`}> Visit their family profile.</Link></li>
           <div className="button-readIt-container">
          
-          { click? null :   <button className="button button-readIt" onClick={handleDeleteNotification}><span>Read It</span></button>}
+          { click ? null :   <button className="button button-readIt" onClick={handleDeleteNotification}><span>Read It</span></button>}
         
           </div>
          </ul>

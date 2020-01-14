@@ -746,6 +746,28 @@
 .button-delete {
   width: 300px;
 }
+
+/*update*/
+.update-container fieldset{
+  border: 5px solid #1F497D;
+  border-radius: 5px;
+  font-size: 22px;
+  padding: 20px;
+  box-shadow: 0 0 0 5px #ddd;
+}
+.update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.update-container form {
+  padding: 0px 200px;
+}
+
+
+
+
 /*CAROUSEL*/
 .text-movement {
   position: relative;

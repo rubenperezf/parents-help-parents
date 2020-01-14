@@ -78,8 +78,9 @@ function UpdateFamilyChild({props}) {
     }
     
 return (
-    <div>
-    <h1>Update family</h1>
+    <div className="update-container">
+      <fieldset>
+    <legend>Update family</legend>
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -100,7 +101,7 @@ return (
           <br></br>
           <TextField
             required
-            label="familyName"
+            label="Family Name"
             id="family-name"
             defaultValue={props.familyName}
             style={{ width: "500px" }}
@@ -114,6 +115,8 @@ return (
             required
             label="Description"
             id="family-description"
+            rows="5"
+            multiline
             defaultValue={props.description}
             style={{ width: "500px" }}
             onChange={e => setDescription(e.target.value)}
@@ -124,13 +127,11 @@ return (
           <br></br>
           <TextField
             required
-            label="parentsName"
+            label="Parents Name"
             id="parents-name"
             defaultValue={props.parentsName}
-            rows="3"
+            rows="1"
             style={{ width: "500px" }}
-            multiline
-            variant="outlined"
             onChange={e => setParentsName(e.target.value)}
           ></TextField>
         </div>
@@ -139,13 +140,11 @@ return (
           <br></br>
           <TextField
             required
-            label="parentsAge"
+            label="Parents Age"
             id="parents-age"
             defaultValue={props.parentsAge}
-            rows="15"
+            rows="1"
             style={{ width: "500px" }}
-            multiline
-            variant="outlined"
             onChange={e => setParentsAge(e.target.value)}
           ></TextField>
         </div>
@@ -153,13 +152,11 @@ return (
           <br></br>
           <TextField
             required
-            label="numberOfKids"
+            label="Number Of Kids"
             id="number-of-kids"
             defaultValue={props.numberOfKids}
             rows="1"
             style={{ width: "500px" }}
-            multiline
-            variant="outlined"
             onChange={e => setNumberOfKids(e.target.value)}
           ></TextField>
         </div>
@@ -167,13 +164,11 @@ return (
             <br></br>
             <TextField
                 required
-                label="kidsName"
+                label="Kids Name"
                 id="kids-name"
                 defaultValue={props.kidsName}
                 rows="1"
                 style={{ width: "500px" }}
-                multiline
-                variant="outlined"
                 onChange={e => setKidsName(e.target.value)}
             ></TextField>
         </div>
@@ -181,13 +176,11 @@ return (
             <br></br>
             <TextField
                 required
-                label="kidsAge"
+                label="Kids Age"
                 id="kids-age"
                 defaultValue={props.kidsAge}
                 rows="1"
                 style={{ width: "500px" }}
-                multiline
-                variant="outlined"
                 onChange={e => setKidsAge(e.target.value)}
             ></TextField>
         </div>
@@ -195,13 +188,11 @@ return (
             <br></br>
             <TextField
                 required
-                label="images"
+                label="Images"
                 id="images"
                 defaultValue={props.images}
                 rows="1"
                 style={{ width: "500px" }}
-                multiline
-                variant="outlined"
                 onChange={e => setImages(e.target.value)}
             ></TextField>
         </div>
@@ -209,13 +200,11 @@ return (
             <br></br>
             <TextField
                 required
-                label="location"
+                label="Location"
                 id="location"
                 defaultValue={props.location}
                 rows="1"
                 style={{ width: "500px" }}
-                multiline
-                variant="outlined"
                 onChange={e => setLocation(e.target.value)}
             ></TextField>
             </div>
@@ -224,6 +213,7 @@ return (
           <button className="button"><span>Update Family</span></button>
         </div>
       </form>
+      </fieldset>
          </div>   
     )
 }
