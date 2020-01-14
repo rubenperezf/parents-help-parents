@@ -48,7 +48,7 @@ function UpdateFamily() {
          numberOfKids: family.numberOfKids,
          kidsName: family.kidsName,
          kidsAge: family.kidsAge,
-         images: family.Images,
+         images: family.images,
          location: family.location
          }}/>
             </div>
