@@ -10,27 +10,6 @@ import {Link} from "react-router-dom"
 const ImagesCarousel = [header1, header2, header3];
 
 function Carousel() {
-  // const [image, setImage] = useState("")
-  // const [nextPicture, setNextPicture] = useState(false)
-
-  // useEffect(() => {
-  //   function randomNumber() {
-  //     return Math.round(Math.random()*2)
-  //   }
-  //     if(nextPicture===false){
-  //       setImage(ImagesCarousel[randomNumber()])
-  //       setTimeout(() => {
-  //         setImage(ImagesCarousel[randomNumber()])
-  //         setNextPicture(true)
-  //       }, 4000);
-  //     } else if(nextPicture===true){
-  //       setTimeout(() => {
-  //         setImage(ImagesCarousel[randomNumber()])
-  //         setNextPicture(false)
-  //       }, 8000);
-  //     }
-  //   },[]
-  // )
   return (
     <div>
       <div className="carousel-container">
