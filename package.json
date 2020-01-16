@@ -63,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "react-alice-carousel": "^1.17.2"
   }
 }
