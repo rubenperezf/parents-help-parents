@@ -37,9 +37,9 @@ function Notifications() {
         .filter(element => element.userName === user.name)
         .map(family => {
           return (
-            <div>
+            <div key={family._id}>
               <fieldset>
-                <legend key={family._id}>Notifications</legend>
+                <legend>Notifications</legend>
                 <div className="row-family-details">
                   <ol>
                     {family.interested

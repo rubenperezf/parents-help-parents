@@ -38,7 +38,7 @@ function NumberOfNotifications() {
           .map(family => {
             return (
                 
-                  <div className="row-family-details">
+                  <div key={family._id} className="row-family-details">
                     <p className='number'>{family.notificationsReaded.length}</p>
               </div>
             );

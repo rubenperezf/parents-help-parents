@@ -43,7 +43,7 @@ const MyFamily = () => {
           .filter(element => element.userName === user.name)
           .map(family => {
             return (
-              <div key={family._id}>
+              <div key={family._id} >
                 <fieldset>
                   <div className="update-delete-container">
                   <Link to="update-family">
@@ -53,7 +53,7 @@ const MyFamily = () => {
                   </Link>
                   <DeleteFamily />
                   </div>
-                  <legend key={family._id}>My Family</legend>
+                  <legend>My Family</legend>
                   <div className="row-family-details">
                     <div className="text-family-details">
                       <p>Family Name:</p>

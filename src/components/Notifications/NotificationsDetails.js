@@ -61,8 +61,8 @@ function NotificationsDetails({props}) {
             element => element.userEmail === props.family)
             .map(family => {
                 return (
-        <ul>
-          <li kay={family._id}>Family name: {family.familyName}</li>
+        <ul key={family._id}>
+          <li >Family name: {family.familyName}</li>
           <li>Number of kids: {family.numberOfKids}</li>
           <li><Link to={`./family/${family._id}`}> Visit their family profile.</Link></li>
           <div className="button-readIt-container">

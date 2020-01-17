@@ -18,7 +18,7 @@ function reviewStarts(rating) {
     test("Give stars depnding the rating", () => {
       const input = 1
         
-      const output = `<img src={OneStar} alt="rating" />`
+      const output = `<img src={OneStar} alt="rating"/>`
 
       expect(reviewStarts(input)).toEqual(output);
     });
