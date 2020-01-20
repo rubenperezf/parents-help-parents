@@ -66,12 +66,7 @@ const Profile = () => {
           <fieldset>
             <legend>Evaluation</legend>
             <h3>Value our service</h3>
-            <form
-              onSubmit={e => {
-                e.preventDefault();
-                handlePostOpinion(opinion, rating);
-              }}
-            >
+            <form>
               <textarea
                 onChange={e => setOpinion(e.target.value)}
                 placeholder="Type your Opinion"
