@@ -33,7 +33,7 @@ function Newsletter() {
       style={{ backgroundImage: `url(${newsletterBackground})` }}
     >
       <div className="title-newsletter">
-        <h1>Join our Newsletter!</h1>
+        <h1>Join Our Newsletter!</h1>
       </div>
       <form>
         <div className="form-newsletter-container">
