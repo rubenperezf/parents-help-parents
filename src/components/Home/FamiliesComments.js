@@ -35,7 +35,7 @@ const FamiliesComments = () => {
       {data.list.length > 0 && (
         <Slider>
           {data.list
-            // .filter(item => item.rating ==="7" || item.rating ==="8" ||item.rating ==="9"|| item.rating ==="10")
+            .filter(item => item.rating ==="7" || item.rating ==="8" ||item.rating ==="9"|| item.rating ==="10")
             .map(item => {
               return (
                 <div key={item._id} className="families-comments-container">
