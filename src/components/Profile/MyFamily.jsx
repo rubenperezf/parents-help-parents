@@ -56,15 +56,7 @@ const MyFamily = () => {
                   <legend>My Family</legend>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Family Name:</p>
-                    </div>
-                    <div className="text-maped-details">
-                      <p>{family.familyName}</p>
-                    </div>
-                  </div>
-                  <div className="row-family-details">
-                    <div className="text-family-details">
-                      <p>About us:</p>
+                      <p>About Us:</p>
                     </div>
                     <div className="text-maped-details">
                       <p>{family.description}</p>
@@ -77,37 +69,37 @@ const MyFamily = () => {
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Parents names:</p>
+                      <p>Parents' Names:</p>
                     </div>
                     <p>{family.parentsName}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Parents age: </p>
+                      <p>Parents' Ages: </p>
                     </div>
                     <p>{family.parentsAge}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Number of kids: </p>
+                      <p>Number of Kids: </p>
                     </div>
                     <p>{family.numberOfKids}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Kids Name: </p>
+                      <p>Kids' Names: </p>
                     </div>
                     <p>{family.kidsName}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Kids Age: </p>
+                      <p>Kids' Ages: </p>
                     </div>
                     <p>{family.kidsAge}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>City Zone: </p>
+                      <p>Neighborhood: </p>
                     </div>
                     <p>{family.location}</p>
                   </div>
