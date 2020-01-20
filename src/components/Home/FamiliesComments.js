@@ -31,7 +31,7 @@ const FamiliesComments = () => {
   }, []);
   return (
     <div className="families-comments-container">
-      <h1>Our clients talk about us.</h1>
+      <h1>What our clients are saying</h1>
       {data.list.length > 0 && (
         <Slider>
           {data.list

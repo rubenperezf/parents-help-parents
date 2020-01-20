@@ -22,7 +22,7 @@ function FAQ() {
       />
             <ToggleContent
         toggle={show => (
-          <button className="open-faq" onClick={show}>Why I shul trust Parents Help Parents?</button>
+          <button className="open-faq" onClick={show}>Why I should trust Parents Help Parents?</button>
         )}
         content={hide => (
           <p>
