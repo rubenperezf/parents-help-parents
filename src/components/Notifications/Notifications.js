@@ -46,7 +46,7 @@ function Notifications() {
                       .slice()
                       .reverse()
                       .map(element => (
-                        <div className="notification-family-container">
+                        <div key={family._id} className="notification-family-container">
                           <li>
                             There is a family interested in you, please contact
                             them in the following email{" "}

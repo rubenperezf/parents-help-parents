@@ -43,11 +43,11 @@ const MyFamily = () => {
           .filter(element => element.userName === user.name)
           .map(family => {
             return (
-              <div key={family._id} >
+              <div key={family._id}>
                 <fieldset>
                   <div className="update-delete-container">
                   <Link to="update-family">
-                    <button className="button button-update" props={family._id}>
+                    <button className="button button-update">
                       <span>UpdateFamily</span>
                     </button>
                   </Link>
