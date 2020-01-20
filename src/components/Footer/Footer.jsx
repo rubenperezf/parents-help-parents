@@ -1,8 +1,8 @@
 import React from "react";
-import logoFacebook from "../../images/logoFacebook.png";
-import logoTwitter from "../../images/logoTwitter.png";
-import logoYoutube from "../../images/logoYoutube.png";
-import logoInstagram from "../../images/logoInstagram.png";
+import logoFacebook from "../../images/social-media/logoFacebook.png";
+import logoTwitter from "../../images/social-media/logoTwitter.png";
+import logoYoutube from "../../images/social-media/logoYoutube.png";
+import logoInstagram from "../../images/social-media/logoInstagram.png";
 import {Link} from "react-router-dom"
 
 function Footer() {

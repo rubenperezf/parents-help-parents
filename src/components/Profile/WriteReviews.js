@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useAuth0 } from "../../react-auth0-spa";
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import Dialog from "../Dialog";
 
 const MyFamily = ({ props }) => {

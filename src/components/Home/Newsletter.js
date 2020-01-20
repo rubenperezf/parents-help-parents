@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import newsletterBackground from "../../images/newsletter-background.jpg";
+import newsletterBackground from "../../images/newsletter/newsletter-background.jpg";
 import axios from "axios";
 
 function Newsletter() {

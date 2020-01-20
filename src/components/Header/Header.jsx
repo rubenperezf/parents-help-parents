@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../images/parents-help-parents-logo.png";
+import logo from "../../images/logo/parents-help-parents-logo.png";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 

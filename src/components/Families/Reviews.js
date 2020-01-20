@@ -2,11 +2,11 @@ import React, { useReducer, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { startSession } from "mongoose";
-import OneStar from "../../images/reviews-1star.png";
-import TwoStars from "../../images/reviews-2stars.png";
-import ThreeStars from "../../images/reviews-3stars.png";
-import FourStars from "../../images/reviews-4stars.png";
-import FiveStars from "../../images/reviews-5stars.png";
+import OneStar from "../../images/rating/reviews-1star.png";
+import TwoStars from "../../images/rating/reviews-2stars.png";
+import ThreeStars from "../../images/rating/reviews-3stars.png";
+import FourStars from "../../images/rating/reviews-4stars.png";
+import FiveStars from "../../images/rating/reviews-5stars.png";
 import WriteReviews from "../Profile/WriteReviews";
 
 function reviewStarts(rating) {
