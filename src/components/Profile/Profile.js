@@ -26,7 +26,7 @@ const Profile = () => {
   const [opinion, setOpinion] = useState("");
   const [rating, setRating] = useState("");
 
-  const handlePostOpinion = (opinion, rating) => {
+  const handlePostOpinion = (userName, opinion, rating) => {
     axios.post("http://localhost:2500/opinion", {
       userName: userName,
       opinion: opinion,
@@ -34,7 +34,6 @@ const Profile = () => {
     });
   };
   useEffect(() => {
-    console.log(user.name)
     setUserName(user.name);
   }, []);
   useEffect(() => {
@@ -68,10 +67,10 @@ const Profile = () => {
             <legend>Evaluation</legend>
             <h3>Value our service</h3>
             <form
-              onSubmit={e => {
-                e.preventDefault();
-                handlePostOpinion(opinion, rating);
-              }}
+              // onSubmit={e => {
+              //   e.preventDefault();
+              //   handlePostOpinion(opinion, rating);
+              // }}
             >
               <textarea
                 onChange={e => setOpinion(e.target.value)}
@@ -97,8 +96,8 @@ const Profile = () => {
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
-              {/* <Dialog props ={{page: 'opinion', handlePostOpinion, userName: userName, opinion: opinion, rating: rating}}/> */}
-              <button className="button"><spam>Send</spam></button>
+              <Dialog props ={{page: 'opinion', handlePostOpinion, userName: userName, opinion: opinion, rating: rating}}/>
+              {/* <button className="button"><spam>Send</spam></button> */}
              
             </form>
           </fieldset>
