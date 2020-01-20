@@ -34,6 +34,7 @@ const Profile = () => {
     });
   };
   useEffect(() => {
+    console.log(user.name)
     setUserName(user.name);
   }, []);
   useEffect(() => {
@@ -66,7 +67,12 @@ const Profile = () => {
           <fieldset>
             <legend>Evaluation</legend>
             <h3>Value our service</h3>
-            <form>
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                handlePostOpinion(opinion, rating);
+              }}
+            >
               <textarea
                 onChange={e => setOpinion(e.target.value)}
                 placeholder="Type your Opinion"
@@ -91,7 +97,8 @@ const Profile = () => {
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
-              <Dialog props ={{page: 'opinion', handlePostOpinion, userName: userName, opinion: opinion, rating: rating}}/>
+              {/* <Dialog props ={{page: 'opinion', handlePostOpinion, userName: userName, opinion: opinion, rating: rating}}/> */}
+              <button className="button"><spam>Send</spam></button>
              
             </form>
           </fieldset>
