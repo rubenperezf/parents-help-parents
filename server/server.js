@@ -73,7 +73,7 @@ app.get("/api/external", checkJwt, (req, res) => {
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  `mongodb+srv://${credentials.username}:${credentials.password}@cluster0-im5lw.mongodb.net/test?retryWrites=true&w=majority`,
+  `mongodb+srv://${credentials.username}:${credentials.password}@cluster0-im5lw.mongodb.net/parents-help-parents?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
