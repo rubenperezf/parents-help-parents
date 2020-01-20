@@ -65,7 +65,7 @@ function FamilyDetails(props) {
                   <legend key={family._id}>Family: {family.familyName}</legend>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>About us:</p>
+                      <p>About Us:</p>
                     </div>
                     <div className="text-maped-details">
                       <p>{family.description}</p>
@@ -78,31 +78,37 @@ function FamilyDetails(props) {
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Parents names:</p>
+                      <p>Parents' Names:</p>
                     </div>
                     <p>{family.parentsName}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Number of kids: </p>
-                    </div>
-                    <p>{family.numberOfKids}</p>
-                  </div>
-                  <div className="row-family-details">
-                    <div className="text-family-details">
-                      <p>Parents age: </p>
+                      <p>Parents' Ages: </p>
                     </div>
                     <p>{family.parentsAge}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>Kids Name: </p>
+                      <p>Number of Kids: </p>
+                    </div>
+                    <p>{family.numberOfKids}</p>
+                  </div>
+                  <div className="row-family-details">
+                    <div className="text-family-details">
+                      <p>Kids' Names: </p>
                     </div>
                     <p>{family.kidsName}</p>
                   </div>
                   <div className="row-family-details">
                     <div className="text-family-details">
-                      <p>City Zone: </p>
+                      <p>Kids' Ages: </p>
+                    </div>
+                    <p>{family.kidsAge}</p>
+                  </div>
+                  <div className="row-family-details">
+                    <div className="text-family-details">
+                      <p>Neighborhood: </p>
                     </div>
                     <p>{family.location}</p>
                   </div>
