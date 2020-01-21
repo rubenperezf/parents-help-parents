@@ -48,7 +48,7 @@ const MyFamily = () => {
                   <div className="update-delete-container">
                   <Link to="update-family">
                     <button className="button button-update">
-                      <span>UpdateFamily</span>
+                      <span>Update Family</span>
                     </button>
                   </Link>
                   <DeleteFamily />

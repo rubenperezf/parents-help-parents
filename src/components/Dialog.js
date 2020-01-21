@@ -74,7 +74,7 @@ const handleClose = () => {
       {props.page==="writeReviews" &&<button className="button" type="button" onClick={handleWriteReview}>
         <span>Send</span>
       </button>}
-      {props.page==="interested" &&  <button className="button button-interested" onClick={handleInterested}><span>Like it</span></button>}
+      {props.page==="interested" &&  <button className="button button-interested" onClick={handleInterested}><span>Send Notification</span></button>}
       {props.page==="contactUs" &&         <button className="button" onClick={e => { e.preventDefault(); handleContactUs(props.name, props.email, props.message)}}><span>Send</span></button>}
       {props.page==="opinion" &&  <button className="button" onClick={e => { e.preventDefault(); handleOpinion(props.userName, props.opinion, props.rating)}}><span>Send</span></button>}
       
