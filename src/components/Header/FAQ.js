@@ -25,7 +25,9 @@ function FAQ() {
         )}
         content={hide => (
           <p>
-            Read other parents expreiences about this plataform here.
+            Parents Help Parents provides a safe platform that requires both parties to approve 
+            each others' profiles before receiving their contact information. Additionally, parents
+            can read about other Parents Help Parents experiences on the home page.
             <div className="close-faq"><button  className="close-faq-2" onClick={hide}>Close</button></div>
           </p>
         )}
@@ -35,7 +37,7 @@ function FAQ() {
         toggle={show => <button className="open-faq" onClick={show}>How I post my family?</button>}
         content={hide => (
           <p>
-            You only need to create and account in Parents Help Parents and go
+            You only need to create an account on Parents Help Parents, go
             to your profile and complete the form.
             <div className="close-faq"><button  className="close-faq-2" onClick={hide}>Close</button></div>
           </p>
@@ -48,7 +50,7 @@ function FAQ() {
         )}
         content={hide => (
           <p>
-            Go to your profile and edit what ever you like to change.
+            Go to your profile and edit whatever you would like to change.
 
             <div className="close-faq"><button  className="close-faq-2" onClick={hide}>Close</button></div>
           </p>
