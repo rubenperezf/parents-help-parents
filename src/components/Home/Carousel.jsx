@@ -13,7 +13,7 @@ function Carousel() {
   return (
     <div>
       <div className="carousel-container">
-        <h1 className="text-movement">Families that take care of each other.<Link to="/families"> Start Here!</Link></h1>
+        <h1 className="text-movement">Connecting families to fill the gaps in childcare.<Link to="/families"> Start Here!</Link></h1>
         <Slider dots className="slider">
           <div>
             <img src={header1} alt="home" />
