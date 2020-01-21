@@ -93,10 +93,10 @@ const handleClose = () => {
         <Fade in={open}>
           <div className="dialog">
           <div className={classes.paper}>
-            {props.page === "writeReviews" && `Review done thank you so much!`}
-            {props.page === "interested" && `We send a notification to this family with your email. They will conect with you in case they are interested`}
-            {props.page === "contactUs" && `Thanks for contact us. We will contact you as faster we can a chance!`}
-            {props.page === "opinion" && `Thanks for evaluate or webpage. We appreciate your opinion!`}
+            {props.page === "writeReviews" && `Review completed. Thank you so much!`}
+            {props.page === "interested" && `We sent a notification to this family with your email address. They will connect with you if they are interested`}
+            {props.page === "contactUs" && `Thanks for contacting us. We will contact you as soon as possible!`}
+            {props.page === "opinion" && `Thanks for rating our service. We appreciate your opinion!`}
           </div>
           </div>
         </Fade>
