@@ -17,9 +17,9 @@ function Newsletter() {
   };
   useEffect(() => {
     setEmailSender("rubenperezfeijoo@gmail.com");
-    setEmailSubject(" Welcome to Parents Help Parents Newsletter");
+    setEmailSubject("Welcome to Parents Help Parents Newsletter");
     setEmailText(
-      "Thank you for join our Newsletter.  We will send you monthly emails about our new things."
+      "Thank you for joining our Newsletter.  We will send you monthly emails about updates to our webpage, and childcare topics and tips."
     );
   }, []);
   const handlePost = email => {
