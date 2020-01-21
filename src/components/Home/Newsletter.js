@@ -46,8 +46,9 @@ function Newsletter() {
           </div>
           <div className="button-newsletter">
             <button onClick={sendEmail}>
+              <span>
               Subscribe
-              <span />
+              </span>
             </button>
           </div>
         </div>
