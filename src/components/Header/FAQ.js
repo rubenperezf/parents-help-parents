@@ -12,10 +12,9 @@ function FAQ() {
         )}
         content={hide => (
           <p>
-            Parents Help Parents is a platform that help you and your family
-            when you need leve your children to go to an event, party... Other
-            family in your situation will be the babysitter and you will do the
-            same for them.
+            Parents Help Parents is a platform that helps you and your family
+            connect with other families that share similar values. We facilitate 
+            new relationships that allow families to collaborate with childcare when needed.
             <div className="close-faq"><button  className="close-faq-2" onClick={hide}>Close</button></div>
           </p>
         )}
