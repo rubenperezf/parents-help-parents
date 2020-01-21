@@ -1,0 +1,40 @@
+
+/* MY FAMILY*/
+.myfamily-container {
+    width: 800px;
+    margin-left: 20px;
+  }
+  .update-delete-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  .button-update, 
+  .button-delete {
+    width: 300px;
+  }
+  
+  /*update*/
+  .update-container fieldset{
+    border: 5px solid #1F497D;
+    border-radius: 5px;
+    font-size: 22px;
+    padding: 20px;
+    box-shadow: 0 0 0 5px #ddd;
+  }
+  .update-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .update-container form {
+    padding: 0px 200px;
+  }
+  
+  
+/*UPdate*/
+.form-container-update {
+    width: 700px;
+    margin: 0 auto;
+  }  

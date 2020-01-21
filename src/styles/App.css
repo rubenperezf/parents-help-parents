@@ -1,0 +1,80 @@
+
+* {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/*general button*/
+.button a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.button {
+  border-radius: 4px;
+  background-color: #1F497D;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button-interested {
+  background-color: #93291E;
+  width: 200px;
+}
+.button-interested:hover {
+  background-color: #93291E;
+
+}
+ .interested-goBack-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+ }
+.button-privateMessages {
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

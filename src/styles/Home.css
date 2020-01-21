@@ -1,0 +1,142 @@
+/*CAROUSEL*/
+.text-movement {
+    position: relative;
+    animation-name: text-movement;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    color: #1F497D;
+  }
+  .text-movement a {
+    text-decoration: none;
+    color: #93291E;
+  }
+  .text-movement a:hover {
+    color: #1F497D;
+  }
+  @keyframes text-movement {
+  
+    from {left: -1000px;}
+    to {left: -50px;}
+  }
+  
+  /* Slideshow container */
+  .carousel-container {
+    width: 1000px;
+    margin: 0 auto;
+   /* z-index: -2; */
+  }
+  .slider {
+    /* z-index: -1; */
+  }
+  .carousel-container img {
+    width: 1000px;
+    height: 600px;
+  }
+  
+  /* Background video and Comments*/
+  .videoTag {
+    width: 100%;
+  }
+  .commentsVideo-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+   
+    
+  }
+  .families-comments-container {
+    
+   width: 40%;
+   
+  
+  }
+  .commentsVideo-container h1 {
+    border-top: 1px solid #1F497D;
+    border-bottom: 5px solid #1F497D;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1F497D;
+    
+   }
+  .background-video-container {
+    border-top: 1px solid #1F497D;
+    width: 40%;
+    height: 500px;
+    
+  }
+  .families-comments-container blockquote{
+    font-size: 30px;
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: .5em 10px;
+    padding: 0 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 10px 20px;
+    line-height: 1.4;
+    padding: 50px;
+    margin-top: 30px;
+  }
+  
+  .families-comments-container blockquote:before {
+    content: open-quote;
+    display: inline;
+    line-height: 0;
+    left: -10px;
+    position: relative;
+    top: 30px;
+    color: #ccc;
+    font-size: 3em;
+  }
+  .families-comments-container p{
+    margin: 0;
+  }
+  .families-comments-container footer{
+    margin:0;
+    text-align: right;
+    font-size: 1em;
+    font-style: italic;
+    margin-right: 30px;
+  }
+  /*NEWSLETTER*/
+  .newsletter-container {
+    width: 80%;
+    margin: 100px auto;
+    height: 400px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 300px;
+    color: #1F497D;
+  }
+  .newsletter-container h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .form-newsletter-container {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    
+  }
+  .input-newsletter input{
+    width: 300px;
+    font-size: 16px;
+    height: 100%;
+    margin-right: 10px;
+  }
+  .button-newsletter button {
+      width: 100px;
+      background:  #93291E;
+      height: 100%;
+      font-size: 16px;
+      color: #fff;
+  }
+  .button-newsletter button:hover {
+  
+    background: #1F497D;
+  
+  }

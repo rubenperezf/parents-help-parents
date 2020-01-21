@@ -1,5 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
+import "./styles/Footer.css";
+import "./styles/Header.css";
+import "./styles/Profile.css";
+import "./styles/Families.css";
+import "./styles/MyFamily.css";
+import "./styles/Home.css";
+import "./styles/Notifications.css";
 import Header from "./components/Header/Header"
 import Carousel from "./components/Home/Carousel"
 import { Router, Route, Switch } from "react-router-dom";

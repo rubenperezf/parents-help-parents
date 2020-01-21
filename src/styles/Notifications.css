@@ -1,0 +1,61 @@
+/*notifications*/
+.numberOfNotifications-container {
+    float: right;
+    margin-right: 2px;
+    color: #93291E;
+  }
+  .numberOfNotifications-container .number{
+    border: 1px solid #93291E;
+    border-radius: 100%;
+    padding: 2px;
+  
+  }
+  .notifications-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .notifications-container ul {
+    padding: 20px;
+  }
+  .notifications-container li {
+    margin-bottom: 10px;
+  }
+  .notifications-container .email-notifications {
+    color: #93291E;
+    font-size: 30px;
+  }
+  .notification-family-container {
+    border: 5px solid #93291E;
+    border-radius: 5px;
+    font-size: 22px;
+    padding: 30px;
+    margin-bottom: 10px;
+  }
+  .notification-family-container a {
+    text-decoration: none;
+    color: #1F497D;
+  }
+  .notification-family-container a:hover {
+    text-decoration: none;
+    color: #93291E;
+  }
+  .button-readIt-container {
+    display: flex;
+    justify-content: center;
+  }
+  .button-readIt {
+    width: 200px;
+    padding: 0;
+  }
+  .button-readIt:hover {
+    width: 200px;
+    padding: 0;
+  }
+  .button-deleteFamily-notification {
+    width: 200px;
+    padding: 0;
+  }
+  .button-deleteFamily-notification:hover {
+    width: 200px;
+    padding: 0;
+  }

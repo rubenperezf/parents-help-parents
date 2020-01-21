@@ -1,0 +1,320 @@
+/*GET ALL FAMILIES*/
+.display-families-container {
+    /* position: relative;
+    top: 100px; */
+    padding: 50px;
+    margin-bottom: 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .display-families-container .row {
+    width: 450px;
+    margin: 20px;
+  }
+  .display-families-container .our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #1F497D;
+    border-radius: 20px;
+  }
+  .display-families-container .our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+  .display-families-container .our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1F497D;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  .display-families-container .our-team:hover .picture::before {
+    height: 100%;
+  }
+  .display-families-container .our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #1F497D;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .display-families-container .our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+  }
+  .display-families-container .our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #ddd;
+    transform: scale(0.7);
+  }
+  .display-families-container .team-content {
+    margin-bottom: 20px;
+  }
+  .display-families-container .our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+  }
+  .display-families-container .our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #1F497D;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+  }
+  .display-families-container .our-team:hover .social {
+    bottom: 0;
+  }
+  .display-families-container .our-team .social  {
+    display: inline-block;
+  }
+  .display-families-container .our-team .social a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  .display-families-container .our-team .social a:hover {
+    color: #1F497D;
+    background-color: #A9A9A9;
+  }
+  
+  /*filter*/
+  .family-filter-container {
+    border-bottom: 1px solid #1F497D;
+    margin: 0 30px;
+  }
+  
+  .filter-age,
+  .filter-location {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .filter-age .filter-text,
+  .filter-location .filter-text {
+    width: 50%;
+    text-align: right;
+  }
+  .filter-age .filter-options,
+  .filter-location .filter-text {
+    width: 50%;
+  }
+  .family-filter h1{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .family-filter label {
+    margin-right: 50px;
+    font-size: 20px;
+  }
+  .family-filter select {
+    width: 50%;
+    border: 1000px green solid;
+  }
+  
+  .family-filter select {
+    background-color: #1F497D;
+    color: #fff;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .family-filter::before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .family-filter:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .family-filter select option {
+    padding: 30px;
+  }
+  /*FAMILY REVIEWS&DETAILS*/
+  .family-reviews-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+  /*FAMILY REVIEWS*/
+  .reviews-container {
+    width: 700px;
+    /* position: relative;
+    top: 150px; */
+    margin-bottom: 200px;
+  }
+  .each-review-container {
+    border-bottom: 2px solid  #1F497D;
+  }
+  .each-review-container p:last-child{
+    text-align: right;
+    margin-bottom: 5px;
+  }
+  .link-each-review-container {
+    text-decoration: none;
+    color:  #93291E;
+  }
+  .link-each-review-container:hover {
+    text-decoration: none;
+    color: #A9A9A9;
+  }
+  /*FAMILY DETAILS*/
+  
+  .family-details-container {
+    margin-bottom: 200px;
+    width: 58%;
+    /* position: relative;
+    top: 150px; */
+    margin-right: 50px;
+  }
+  .family-details-container fieldset,
+  .family-reviews-container fieldset,
+  .profile-container fieldset,
+  .myfamily-container fieldset,
+  .notifications-container fieldset {
+    border: 5px solid #1F497D;
+    border-radius: 5px;
+    font-size: 22px;
+    padding: 20px;
+    box-shadow: 0 0 0 5px #ddd;
+  }
+  .family-details-container legend,
+  .family-reviews-container legend,
+  .profile-container legend,
+  .myfamily-container legend,
+  .notifications-container legend{
+    background: #1F497D;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ddd;
+    margin-left: 20px;
+  }
+  .family-details-container img,
+  .myfamily-container img  {
+    border: 5px solid #1F497D;
+    border-radius: 50px;
+  }
+  .family-details-container .row-family-details,
+  .myfamily-container .row-family-details {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .family-details-container .row-family-details img,
+  .myfamily-container .row-family-details img{
+    margin: 0 auto;
+  }
+  .family-details-container .text-family-details,
+  .myfamily-container .text-family-details{
+    width: 20%;
+    margin-right: 30px;
+    border: 4px solid #1F497D;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .family-details-container .text-maped-details,
+  .myfamily-container .text-maped-details {
+    width: 60%;
+  }
+  .family-details-container .details-map,
+  .myfamily-container .details-map {
+    border: 5px solid #1F497D;
+    border-radius: 50px;
+    margin: 20px auto;
+  }
+  /*Write reviews*/
+  
+  .write-reviews-container textarea{
+    font-size: 20px;
+  }
+  .write-reviews-container select {
+    font-size: 20px;
+    margin: 20px;
+  }
+  .write-reviews-container .form-row label{
+    padding: 10px;
+  }
+  /*Private Messages*/
+  .reviews-privateMessages-container {
+    width: 700px;
+  
+  
+  }
+  .send-message-container {
+    display: flex;
+    justify-content: center;
+  }
+  .send-message-container .text-message{
+    width: 400px;
+    height: 40px;
+    margin-right: 20px;
+    border: 1px solid #93291E;
+    font-size: 20px;
+  }
+  .private-messages-container {
+    height: 300px;
+    overflow: scroll;
+  }
+  .private-messages-container .each-message {
+    display: flex;
+  }
+  .private-messages-container .writter {
+    color: #1F497D;
+    margin-right: 20px;
+    
+  }
+  .button-send-message {
+  
+    width: 100px;
+    height: 42px;
+    padding: 0px;
+  }
+  
